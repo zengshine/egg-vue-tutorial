@@ -27,6 +27,11 @@ export default (app: Application) => {
     },
   };
 
+  // 配置egg-webpack
+  config.webpack = {
+    browser: false,
+  };
+
   // 配置socket.io
   config.io = {
     init: {},

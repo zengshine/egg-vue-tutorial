@@ -1,4 +1,3 @@
-
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
 const resolve = filepath => path.resolve(__dirname, filepath);
@@ -15,6 +14,9 @@ module.exports = {
       '@component': resolve('app/web/component'),
       '@store': resolve('app/web/page/store'),
     },
+  },
+  devServer: {
+    open: false,
   },
   module: {
     rules: [
