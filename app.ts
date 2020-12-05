@@ -29,6 +29,7 @@ export default class AppBootHook implements IBoot {
    */
   async didLoad() {
     this.app.logger.debug('app.js didLoad');
+    this.app.logger.info('app.js didLoad');
   }
 
   /**

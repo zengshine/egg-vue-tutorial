@@ -38,6 +38,11 @@ export default (app: Application) => {
     },
   };
 
+  // 配置日志
+  config.logger = {
+    level: 'DEBUG',
+  };
+
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${app.name}`,
