@@ -1,11 +1,22 @@
 {
+  "common.js": "/public/js/chunk/common.js",
   "home/index.js": "/public/js/chunk/home/index.js",
+  "login.js": "/public/js/chunk/login.js",
   "runtime.js": "/public/js/runtime.js",
   "deps": {
     "home/index.js": {
       "js": [
         "/public/js/runtime.js",
+        "/public/js/chunk/common.js",
         "/public/js/chunk/home/index.js"
+      ],
+      "css": []
+    },
+    "login.js": {
+      "js": [
+        "/public/js/runtime.js",
+        "/public/js/chunk/common.js",
+        "/public/js/chunk/login.js"
       ],
       "css": []
     }
