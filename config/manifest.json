@@ -1,22 +1,22 @@
 {
-  "common.js": "/public/js/chunk/common.c55e0c8b.js",
-  "home/index.js": "/public/js/chunk/home/index.1bb4c869.js",
-  "login.js": "/public/js/chunk/login.a205c4bc.js",
-  "runtime.js": "/public/js/runtime.00de9a33.js",
+  "common.js": "/public/js/chunk/common.js",
+  "home/index.js": "/public/js/chunk/home/index.js",
+  "login.js": "/public/js/chunk/login.js",
+  "runtime.js": "/public/js/runtime.js",
   "deps": {
     "home/index.js": {
       "js": [
-        "/public/js/runtime.00de9a33.js",
-        "/public/js/chunk/common.c55e0c8b.js",
-        "/public/js/chunk/home/index.1bb4c869.js"
+        "/public/js/runtime.js",
+        "/public/js/chunk/common.js",
+        "/public/js/chunk/home/index.js"
       ],
       "css": []
     },
     "login.js": {
       "js": [
-        "/public/js/runtime.00de9a33.js",
-        "/public/js/chunk/common.c55e0c8b.js",
-        "/public/js/chunk/login.a205c4bc.js"
+        "/public/js/runtime.js",
+        "/public/js/chunk/common.js",
+        "/public/js/chunk/login.js"
       ],
       "css": []
     }
