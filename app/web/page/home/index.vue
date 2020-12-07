@@ -1,7 +1,5 @@
 <template>
-  <layout>
-    <div>{{ message }}</div>
-  </layout>
+  <div>{{ message }}</div>
 </template>
 
 <script lang="ts">

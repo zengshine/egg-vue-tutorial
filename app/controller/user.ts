@@ -24,27 +24,27 @@ class UserController extends Controller {
   }
 
   async new() {
-    console.log('user-controller，new');
+    this.ctx.logger.debug('user-controller，new');
   }
 
   async show() {
-    console.log('user-controller，show');
+    this.ctx.logger.debug('user-controller，show');
   }
 
   async edit() {
-    console.log('user-controller，edit');
+    this.ctx.logger.debug('user-controller，edit');
   }
 
   async create() {
-    console.log('user-controller，create');
+    this.ctx.logger.debug('user-controller，create');
   }
 
   async update() {
-    console.log('user-controller，update');
+    this.ctx.logger.debug('user-controller，update');
   }
 
   async destroy() {
-    console.log('user-controller，destroy');
+    this.ctx.logger.debug('user-controller，destroy');
   }
 }
 

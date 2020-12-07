@@ -3,6 +3,8 @@
   "compilerOptions": {
     "target": "es2017",
     "module": "commonjs",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "noImplicitAny": false,
     "experimentalDecorators": true,
@@ -35,6 +37,6 @@
     "app/public",
     "app/views",
     "app/web/view*",
-    "node_modules*"
+    "node_modules*",
   ]
 }
