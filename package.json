@@ -10,7 +10,7 @@
   "scripts": {
     "start": "egg-scripts start --daemon --title=egg-server-tutorial --port 7002",
     "stop": "egg-scripts stop --title=egg-server-tutorial",
-    "dev": "egg-bin dev -r egg-ts-helper/register --port 7003",
+    "dev": "egg-bin dev -r egg-ts-helper/register",
     "build": "ets && tsc -p tsconfig.json && easy build prod",
     "debug": "egg-bin debug",
     "test-local": "egg-bin test",
@@ -32,6 +32,7 @@
     "egg-view-vue-ssr": "^3.3.3",
     "ts-loader": "^8.0.11",
     "vue": "^2.6.12",
+    "vue-router": "^3.4.9",
     "vuex": "^3.6.0",
     "vuex-router-sync": "^5.0.0"
   },
@@ -56,6 +57,8 @@
     "eslint-config-egg": "^8.0.0",
     "eslint-plugin-vue": "^7.2.0",
     "imagemin-webpack-plugin": "^2.4.2",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0",
     "tslib": "^1.9.0",
     "typescript": "^3.0.0",
     "vue-template-compiler": "^2.6.12"

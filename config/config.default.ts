@@ -1,9 +1,16 @@
 import { EggAppConfig, Application, PowerPartial } from 'egg';
 
 import path = require('path');
+import { getWebpackConfig } from '@easy-team/easywebpack-vue';
 
 export default (app: Application) => {
   const config = {} as PowerPartial<EggAppConfig>;
+
+  config.cluster = {
+    listen: {
+      port: 7000,
+    },
+  };
 
   // override config from framework / plugin
   // use for cookie sign key, should change to your own and keep security
@@ -22,7 +29,7 @@ export default (app: Application) => {
 
   // 配置vuessr插件
   config.vuessr = {
-    layout: path.resolve(app.baseDir, 'app/web/view/layout.html'),
+    layout: path.resolve(app.baseDir, 'app/web/layout/index.html'),
     renderOptions: {
       basedir: path.join(app.baseDir, 'app/view'),
     },
@@ -31,6 +38,7 @@ export default (app: Application) => {
   // 配置egg-webpack
   config.webpack = {
     browser: false,
+    webpackConfigList: getWebpackConfig(),
   };
 
   // 配置socket.io

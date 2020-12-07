@@ -5,7 +5,7 @@ module.exports = {
   egg: true,
   framework: 'vue',
   entry: {
-    'home/index': 'app/web/page/home/index.ts',
+    'main/index': 'app/web/page/main/index.ts',
     login: 'app/web/page/login/login.vue',
   },
   resolve: {
@@ -21,6 +21,14 @@ module.exports = {
     rules: [
       { babel: false },
       { ts: true },
+      {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
     ],
   },
   plugins: [],
