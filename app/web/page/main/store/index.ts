@@ -1,13 +1,11 @@
-import Vue from 'vue';
+export default {
+  state: {
 
-import Vuex from 'vuex';
+  },
 
-Vue.use(Vuex);
-
-export default function createStore(initState: any = {}) {
-  return new Vuex.Store({
-    state: {
-      ...initState,
+  mutations: {
+    SET_INIT_STATE(state, payload) {
+      Object.assign(state, payload);
     },
-  });
-}
+  },
+};

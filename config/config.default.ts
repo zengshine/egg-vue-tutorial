@@ -29,7 +29,7 @@ export default (app: Application) => {
 
   // 配置vuessr插件
   config.vuessr = {
-    layout: path.resolve(app.baseDir, 'app/web/layout/index.html'),
+    layout: path.resolve(app.baseDir, 'app/web/template/client/index.html'),
     renderOptions: {
       basedir: path.join(app.baseDir, 'app/view'),
     },

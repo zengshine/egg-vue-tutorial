@@ -5,7 +5,7 @@ export default (app: Application) => {
 
   router.get('/', controller.main.index);
   router.get('/login', controller.main.login);
-  router.get('/server', controller.main.server);
   router.get('/client', controller.main.client);
+  router.get('/main(/.+)?', controller.main.server);
   router.resources('user', 'api/v1/user', controller.user);
 };

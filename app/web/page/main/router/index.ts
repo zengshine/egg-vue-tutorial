@@ -1,24 +1,18 @@
-import Vue from 'vue';
-
-import VueRouter from 'vue-router';
-
-Vue.use(VueRouter);
-
-export default function createRouter() {
-  return new VueRouter({
-    mode: 'history',
-    base: '',
-    routes: [
-      {
-        name: 'main',
-        path: '/main',
-        component: () => import('@view/main/app.vue'),
-      },
-      {
-        name: 'server',
-        path: '/server',
-        component: () => import('@view/main/server/index.vue'),
-      },
-    ],
-  });
-}
+export default {
+  mode: 'history',
+  base: '/main',
+  routes: [
+    {
+      name: 'main',
+      path: '',
+      component: () => import('@view/main/view/chat/index.vue'),
+      children: [
+        {
+          name: 'chat',
+          path: '/chat',
+          component: () => import('@view/main/view/chat/index.vue'),
+        },
+      ],
+    },
+  ],
+};

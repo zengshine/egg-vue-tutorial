@@ -1,8 +1,6 @@
-import Vue from 'vue';
-import { sync } from 'vuex-router-sync';
-
 export default class App {
   config: any;
+
   constructor(config) {
     this.config = config;
   }
@@ -15,10 +13,9 @@ export default class App {
   }
 
   create(initState) {
-    const { entry, createStore, createRouter } = this.config;
-    const store = createStore(initState);
-    const router = createRouter();
-    sync(store, router);
+    const { entry, store, router } = this.config;
+    store.commit('SET_INIT_STATE', initState);
+
     return {
       router,
       store,
@@ -46,6 +43,7 @@ export default class App {
   }
 
   client() {
+    const { Vue } = this.config;
     Vue.prototype.$http = require('axios');
     const vm = this.create(window.__INITIAL_STATE__);
     vm.router.afterEach(() => {
@@ -58,15 +56,17 @@ export default class App {
 
   server() {
     return context => {
+      const { Vue } = this.config;
       const vm = this.create(context.state);
       const { store, router } = vm;
 
       // 设置初始路径
       const { url } = context.state;
-      const initPath = url || '/server';
-      router.push(initPath);
+      const initUrl = url || '/server';
+      router.push(initUrl);
       return new Promise(resolve => {
         router.onReady(() => {
+          console.log('server route on ready');
           this.fetch(vm).then(() => {
             context.state = store.state;
             return resolve(new Vue(vm));

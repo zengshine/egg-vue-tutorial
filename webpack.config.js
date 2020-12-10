@@ -10,12 +10,14 @@ module.exports = {
   },
   resolve: {
     alias: {
+      '@web': resolve('app/web'),
       '@view': resolve('app/web/page'),
       '@asset': resolve('app/web/asset'),
       '@framework': resolve('app/web/framework'),
       '@component': resolve('app/web/component'),
       '@store': resolve('app/web/page/store'),
     },
+    extensions: [ '.ts', '.js', '.vue' ],
   },
   module: {
     rules: [
