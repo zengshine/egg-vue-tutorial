@@ -1,13 +1,18 @@
 module.exports = {
   // type 类型
   types: [
-    { value: 'feat', name: 'feat:     新增产品功能' },
-    { value: 'fix', name: 'fix:      修复 bug' },
-    { value: 'docs', name: 'docs:     文档的变更' },
+    { 
+      value: 'feat', 
+      name: 'feat:     新增产品功能' },
+    { 
+      value: 'fix', 
+      name: 'fix:      修复 bug' },
+    { 
+      value: 'docs', 
+      name: 'docs:     文档的变更' },
     {
       value: 'style',
-      name:
-        'style:    不改变代码功能的变动(如删除空格、格式化、去掉末尾分号等)',
+      name: 'style:    不改变代码功能的变动(如删除空格、格式化、去掉末尾分号等)',
     },
     {
       value: 'refactor',
@@ -54,6 +59,7 @@ module.exports = {
       ]
     },
    */
+
   // 覆写提示的信息
   messages: {
     type: "请确保你的提交遵循了原子提交规范！\n选择你要提交的类型:",
