@@ -13,6 +13,9 @@
 <script lang="ts">
 import ClientTpl from './client-tpl.vue';
 import ServerTpl from './server-tpl.vue';
+
+// eslint-disable-next-line no-undef
+const isNodeEnv = EASY_ENV_IS_NODE;
 export default {
   name: 'Layout',
 
@@ -23,12 +26,12 @@ export default {
 
   data() {
     return {
-      isNodeEnv: EASY_ENV_IS_NODE,
+      isNodeEnv,
     };
   },
 
   created() {
-    console.log('>>EASY_ENV_IS_NODE create', EASY_ENV_IS_NODE);
+    console.log('>>EASY_ENV_IS_NODE create', isNodeEnv);
   },
 };
 </script>

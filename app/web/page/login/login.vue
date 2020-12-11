@@ -5,8 +5,7 @@
         <img
           src=""
           height="100"
-          alt=""
-        >
+          alt="">
         <p>easyjs</p>
       </div>
       <div class="login-info">
@@ -14,35 +13,30 @@
           v-model="username"
           placeholder="请输入用户名"
           suffix-icon="fa fa-user"
-          style="margin-bottom: 18px"
-        >
+          style="margin-bottom: 18px">
 
         <input
           v-model="password"
           placeholder="请输入密码"
           suffix-icon="fa fa-keyboard-o"
           type="password"
-          style="margin-bottom: 18px"
-        >
+          style="margin-bottom: 18px">
       </div>
 
       <button
         type="button"
         style="width: 100%;margin-bottom: 18px"
-        onclick="javascript: location.href='/admin/'"
-      >
+        onclick="javascript: location.href='/admin/'">
         登录
       </button>
       <div>
         <input
           v-model="remenber"
           type="checkbox"
-          class="login-remember"
-        >记住密码
+          class="login-remember">记住密码
         <a
           href="/admin/"
-          style="float: right;color: #3C8DBC;font-size: 14px"
-        >注册</a>
+          style="float: right;color: #3C8DBC;font-size: 14px">注册</a>
       </div>
     </div>
   </div>

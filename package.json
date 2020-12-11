@@ -21,6 +21,7 @@
     "autod": "autod",
     "lint": "eslint . --ext .ts,.vue",
     "clean": "ets clean",
+    "commit": "exec < /dev/tty && git cz --hook || true",
     "release": "standard-version"
   },
   "dependencies": {
