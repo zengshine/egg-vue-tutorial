@@ -20,7 +20,8 @@
     "ci": "npm run lint && npm run cov && npm run tsc",
     "autod": "autod",
     "lint": "eslint . --ext .ts,.vue",
-    "clean": "ets clean"
+    "clean": "ets clean",
+    "release": "standard-version"
   },
   "dependencies": {
     "axios": "^0.21.0",
@@ -37,6 +38,8 @@
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@easy-team/easywebpack-vue": "^4.1.0",
     "@types/mocha": "^2.2.40",
     "@types/node": "^7.0.12",
@@ -47,7 +50,9 @@
     "autod-egg": "^1.1.0",
     "autoprefixer": "^10.0.4",
     "babel-core": "^7.0.0-bridge.0",
+    "commitlint-config-cz": "^0.13.2",
     "cross-env": "^7.0.3",
+    "cz-customizable": "^6.3.0",
     "easywebpack-cli": "^4.8.1",
     "easywebpack-vue": "^4.5.0",
     "egg-bin": "^4.15.0",
@@ -58,9 +63,11 @@
     "eslint": "^6.7.2",
     "eslint-config-egg": "^8.0.0",
     "eslint-plugin-vue": "^7.2.0",
+    "husky": "^4.3.5",
     "imagemin-webpack-plugin": "^2.4.2",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.0",
+    "standard-version": "^9.0.0",
     "tslib": "^1.9.0",
     "typescript": "^3.0.0",
     "vue-template-compiler": "^2.6.12"
@@ -70,6 +77,11 @@
   },
   "ci": {
     "version": "8"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   },
   "repository": {
     "type": "git",
