@@ -1,6 +1,5 @@
 {
   "common.js": "/public/js/chunk/common.js",
-  "login.js": "/public/js/chunk/login.js",
   "main/index.js": "/public/js/chunk/main/index.js",
   "runtime.js": "/public/js/runtime.js",
   "deps": {
@@ -9,14 +8,6 @@
         "/public/js/runtime.js",
         "/public/js/chunk/common.js",
         "/public/js/chunk/main/index.js"
-      ],
-      "css": []
-    },
-    "login.js": {
-      "js": [
-        "/public/js/runtime.js",
-        "/public/js/chunk/common.js",
-        "/public/js/chunk/login.js"
       ],
       "css": []
     }

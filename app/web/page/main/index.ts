@@ -1,13 +1,13 @@
 import Vue from 'vue';
 
 import Vuex from 'vuex';
-import VueRouter from 'vue-router';
+import VueRouter, { RouterOptions } from 'vue-router';
 import { sync } from 'vuex-router-sync';
 
 import SSRBuilder from '@framework/vue/app';
 
-import routerOptions from '@view/main/router/index';
-import storeOptions from '@view/main/store/index';
+import routerOptions from './router';
+import storeOptions from './store';
 
 import Layout from '@web/template/server/index.vue';
 
@@ -19,7 +19,7 @@ Vue.use(VueRouter);
 
 Vue.component(Layout.name, Layout);
 
-const router = new VueRouter(routerOptions);
+const router = new VueRouter(routerOptions as RouterOptions);
 const store = new Vuex.Store(storeOptions);
 
 sync(store, router);

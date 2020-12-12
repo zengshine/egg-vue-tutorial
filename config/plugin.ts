@@ -4,6 +4,29 @@ import path = require('path');
 
 const plugin: EggPlugin = {
   static: true,
+  // 参数校验
+  validate: {
+    enable: true,
+    package: 'egg-validate',
+  },
+
+  // socket.io
+  io: {
+    enable: false,
+    package: 'egg-socket.io',
+  },
+
+  // ORM
+  sequelize: {
+    enable: true,
+    package: 'egg-sequelize',
+  },
+
+  // vue服务端渲染插件
+  vuessr: {
+    enable: true,
+    package: 'egg-view-vue-ssr',
+  },
 
   // 模板引擎
   nunjucks: {
@@ -17,23 +40,6 @@ const plugin: EggPlugin = {
     path: path.join(__dirname, '../lib/plugin/egg-ua'),
   },
 
-  // 参数校验
-  validate: {
-    enable: true,
-    package: 'egg-validate',
-  },
-
-  // socket.io
-  io: {
-    enable: false,
-    package: 'egg-socket.io',
-  },
-
-  // vue服务端渲染插件
-  vuessr: {
-    enable: true,
-    package: 'egg-view-vue-ssr',
-  },
 
 };
 

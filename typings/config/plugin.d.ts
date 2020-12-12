@@ -14,9 +14,10 @@ import 'egg-schedule';
 import 'egg-static';
 import 'egg-jsonp';
 import 'egg-view';
-import 'egg-view-nunjucks';
 import 'egg-validate';
+import 'egg-sequelize';
 import 'egg-view-vue-ssr';
+import 'egg-view-nunjucks';
 import 'egg-webpack';
 import 'egg-webpack-vue';
 import { EggPluginItem } from 'egg';
@@ -34,10 +35,11 @@ declare module 'egg' {
     static?: EggPluginItem;
     jsonp?: EggPluginItem;
     view?: EggPluginItem;
-    nunjucks?: EggPluginItem;
     validate?: EggPluginItem;
     io?: EggPluginItem;
+    sequelize?: EggPluginItem;
     vuessr?: EggPluginItem;
+    nunjucks?: EggPluginItem;
     webpack?: EggPluginItem;
     webpackvue?: EggPluginItem;
   }

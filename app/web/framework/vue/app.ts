@@ -9,11 +9,14 @@ export default class App {
     if (EASY_ENV_IS_NODE) {
       return this.server();
     }
+
     return this.client();
   }
 
   create(initState) {
     const { entry, store, router } = this.config;
+
+    // 初始化vuex状态
     store.commit('SET_INIT_STATE', initState);
 
     return {
@@ -62,7 +65,7 @@ export default class App {
 
       // 设置初始路径
       const { url } = context.state;
-      const initUrl = url || '/server';
+      const initUrl = url || '/';
       router.push(initUrl);
       return new Promise(resolve => {
         router.onReady(() => {

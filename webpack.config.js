@@ -6,7 +6,7 @@ module.exports = {
   framework: 'vue',
   entry: {
     'main/index': 'app/web/page/main/index.ts',
-    login: 'app/web/page/login/login.vue',
+    // login: 'app/web/page/login/login.vue',
   },
   resolve: {
     alias: {
@@ -33,5 +33,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [],
+  plugins: [
+    { imagemini: false },
+  ],
 };

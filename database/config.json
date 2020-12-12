@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Zeng_1992",
+    "database": "database_development",
+    "host": "8.135.3.155",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
