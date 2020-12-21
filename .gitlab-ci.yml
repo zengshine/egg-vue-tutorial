@@ -4,10 +4,10 @@ stages:
   - deploy
 
 variables:
-  DEPLOY_DIR: "/www/egg-vue"
-  BUILD_PATH: "./public"
-  APP_PACKAGE_NAME: "package"
-  PACKAGE_MD5: ""
+  DEPLOY_DIR: '/www/egg-vue'
+  BUILD_PATH: './public'
+  APP_PACKAGE_NAME: 'package'
+  PACKAGE_MD5: ''
 
 before_script:
   - echo "Before script section"
@@ -26,6 +26,14 @@ build: # jobs
     - echo "Before script in build stage that overwrited the globally defined before_script"
   after_script:
     - echo "After script in build stage that overwrited the globally defined after_script"
+  cache: # 配置缓存文件夹
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+  artifacts: # 将这个job生成的依赖传递给下一个job, 需要配置dependencies
+    expire_in: 60 mins # 设置过期时间，过期后依赖的数据将会被删除
+    paths: # 需要传递给下一个job的目录
+      - node_modules/
   script:
     - echo "========== start install package =========="
     - npm install --production --registry=https://registry.npm.taobao.org/
@@ -37,22 +45,13 @@ build: # jobs
     - mv $BUILD_PATH/* $DEPLOY_DIR
     - tar zcf $APP_PACKAGE_NAME $DEPLOY_DIR
     - md5sum $APP_PACKAGE_NAME |awk '{print $1}' > $PACKAGE_MD5
-    cache: # 配置缓存文件夹
-    key: ${CI_COMMIT_REF_SLUG}
-    paths:
-      - node_modules/
-    artifacts: # 将这个job生成的依赖传递给下一个job, 需要配置dependencies
-      expire: 60 mins # 设置过期时间，过期后依赖的数据将会被删除
-      paths: # 需要传递给下一个job的目录
-      - node_modules/
   tags:
     - egg-vue
 
 deploy: # jobs
   stage: deploy
-  scripts:
-    - ls DEPLOY_DIR
   only:
     - main
   script:
+    - ls $DEPLOY_DIR
     - npm run deploy
