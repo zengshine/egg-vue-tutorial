@@ -8,7 +8,7 @@ variables:
   DEPLOY_DIR: '/www/egg-vue'
   BUILD_PATH: './public'
   APP_PACKAGE_NAME: 'package'
-  PACKAGE_MD5: ''
+  PACKAGE_MD5: '/package/md5'
 
 before_script:
   - echo "Before script section"
@@ -45,6 +45,7 @@ build: # jobs
     - mkdir -p $DEPLOY_DIR
     - mv $BUILD_PATH/* $DEPLOY_DIR
     - tar zcf $APP_PACKAGE_NAME $DEPLOY_DIR
+    - mkdir -p $PACKAGE_MD5
     - md5sum $APP_PACKAGE_NAME |awk '{print $1}' > $PACKAGE_MD5
   tags:
     - egg-vue
