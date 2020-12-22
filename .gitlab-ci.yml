@@ -42,7 +42,7 @@ build: # jobs
     - echo "========== start build =========="
     - npm run build
     - echo "========== after build =========="
-    - mkdir $DEPLOY_DIR
+    - mkdir -p $DEPLOY_DIR
     - mv $BUILD_PATH/* $DEPLOY_DIR
     - tar zcf $APP_PACKAGE_NAME $DEPLOY_DIR
     - md5sum $APP_PACKAGE_NAME |awk '{print $1}' > $PACKAGE_MD5
@@ -55,4 +55,4 @@ deploy: # jobs
     - main
   script:
     - ls $DEPLOY_DIR
-    - npm run deploy
+    # - npm run deploy
