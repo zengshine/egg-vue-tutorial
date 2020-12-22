@@ -58,6 +58,7 @@ export default (app: Application) => {
 
   // 配置日志
   config.logger = {
+    disableConsoleAfterReady: false,
     level: 'DEBUG',
   };
 

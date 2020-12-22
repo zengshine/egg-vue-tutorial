@@ -10,7 +10,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "charset": "utf8",
-    "allowJs": true,
+    "allowJs": false,
     "pretty": true,
     "noEmitOnError": false,
     "noUnusedLocals": true,
@@ -24,19 +24,21 @@
     "inlineSourceMap": true,
     "importHelpers": true,
     "baseUrl": ".",
+    
+    // 匹配webpack alias
     "paths": {
+      "@framework/*": ["app/web/framework/*"],
       "@asset/*": ["asset/*"],
       "@component/*": ["component/*"],
-      "@framework/*": ["framework/*"],
       "@store/*": ["page/store/*"],
       "@router/*": ["page/router/*"],
       "@view/*": ["page/view/*"]
     }
   },
   "exclude": [
-    "app/public",
-    "app/views",
-    "app/web/view/*",
+    "app/public/*",
+    "app/view/*",
+    "app/web/*",
     "node_modules/*",
     "database/*"
   ]

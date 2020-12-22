@@ -8,7 +8,7 @@
     "declarations": true
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-tutorial --port 7002",
+    "start": "ets && tsc -p tsconfig.json && egg-scripts start --daemon --title=egg-server-tutorial --port 7002",
     "stop": "egg-scripts stop --title=egg-server-tutorial",
     "dev": "egg-bin dev -r egg-ts-helper/register",
     "build": "ets && tsc -p tsconfig.json && easy build prod",
@@ -30,7 +30,12 @@
     "dotenv": "^8.2.0",
     "egg": "^2.29.1",
     "egg-scripts": "^2.13.0",
+    "egg-socket.io": "^4.1.6",
+    "egg-validate": "^2.0.2",
+    "egg-view-nunjucks": "^2.2.0",
+    "egg-view-vue-ssr": "^3.3.3",
     "sequelize": "^6.3.5",
+    "egg-sequelize": "^6.0.0",
     "tslib": "^2.0.3",
     "vue": "^2.6.12",
     "vue-router": "^3.4.9",
@@ -58,7 +63,6 @@
     "egg-bin": "^4.15.0",
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.16.0",
-    "egg-sequelize": "^6.0.0",
     "egg-webpack": "^4.5.4",
     "egg-webpack-vue": "^2.0.2",
     "eslint": "^6.7.2",
@@ -70,6 +74,7 @@
     "sass-loader": "^10.1.0",
     "sequelize-cli": "^6.2.0",
     "standard-version": "^9.0.0",
+    "ts-loader": "^8.0.12",
     "tslib": "^2.0.3",
     "typescript": "^4.1.3",
     "vue-template-compiler": "^2.6.12"
