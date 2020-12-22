@@ -10,6 +10,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      '@': resolve('./'),
       '@web': resolve('app/web'),
       '@view': resolve('app/web/page'),
       '@asset': resolve('app/web/asset'),

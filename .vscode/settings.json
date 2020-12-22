@@ -11,6 +11,7 @@
     "Vuex",
     "Zeng",
     "commitlint",
+    "easywebpack",
     "imagemini"
   ]
 }

@@ -1,7 +1,11 @@
 import { EggAppConfig, Application, PowerPartial } from 'egg';
 
+import { EggSequelizeOptions } from 'egg-sequelize';
+
 import path = require('path');
+
 import { getWebpackConfig } from '@easy-team/easywebpack-vue';
+import dbConfig from '../database/config';
 
 export default (app: Application) => {
   const config = {} as PowerPartial<EggAppConfig>;
@@ -64,6 +68,8 @@ export default (app: Application) => {
       threshold: 1024,
     },
   };
+
+  config.sequelize = dbConfig.development as EggSequelizeOptions;
 
   // the return config will combines to EggAppConfig
   return {

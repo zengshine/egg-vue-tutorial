@@ -10,6 +10,7 @@ module.exports = {
   },
 
   rules: {
+    "@typescript-eslint/no-var-requires": 0,
     "spaced-comment": ["error", "always"],
 
     // 强制注释周围有空行

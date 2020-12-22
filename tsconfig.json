@@ -10,7 +10,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "charset": "utf8",
-    "allowJs": false,
+    "allowJs": true,
     "pretty": true,
     "noEmitOnError": false,
     "noUnusedLocals": true,
@@ -23,7 +23,7 @@
     "skipDefaultLibCheck": true,
     "inlineSourceMap": true,
     "importHelpers": true,
-    "baseUrl": "app/web",
+    "baseUrl": ".",
     "paths": {
       "@asset/*": ["asset/*"],
       "@component/*": ["component/*"],
@@ -36,7 +36,8 @@
   "exclude": [
     "app/public",
     "app/views",
-    "app/web/view*",
-    "node_modules*",
+    "app/web/view/*",
+    "node_modules/*",
+    "database/*"
   ]
 }

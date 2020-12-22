@@ -32,12 +32,13 @@ export const model = {
   },
 };
 
-export default app => {
+export default (app, sequelize) => {
+  console.log('user model =============>', app);
   const user = User.init(
     model.schema,
     {
       tableName: model.name,
-      sequelize: app.sequelize,
+      sequelize,
     },
   );
 
