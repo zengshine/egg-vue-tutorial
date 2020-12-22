@@ -55,5 +55,5 @@ deploy: # jobs
   only:
     - main
   script:
-    - ls $DEPLOY_DIR
+    - echo "========== start deploy =========="
     # - npm run deploy
