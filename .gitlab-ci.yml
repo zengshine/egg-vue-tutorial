@@ -69,6 +69,7 @@ build: # jobs
     - md5sum $APP_PACKAGE_NAME
   tags:
     - egg-vue
+  when: manual
 
 deploy: # jobs
   stage: deploy

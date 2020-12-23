@@ -12,13 +12,13 @@ interface UserAttributes {
 
 interface UserCreationAttributes extends Optional<UserAttributes, 'id'> {}
 
-class User extends Model <UserAttributes, UserCreationAttributes> implements UserAttributes {
+class Test extends Model <UserAttributes, UserCreationAttributes> implements UserAttributes {
   public id: number;
   public name: string;
 }
 
 export const model = {
-  name: 'users',
+  name: 'test',
   schema: {
     id: {
       type: DataTypes.INTEGER.UNSIGNED,
@@ -34,7 +34,7 @@ export const model = {
 
 export default (app, sequelize) => {
   console.log(app);
-  const user = User.init(
+  const user = Test.init(
     model.schema,
     {
       tableName: model.name,
