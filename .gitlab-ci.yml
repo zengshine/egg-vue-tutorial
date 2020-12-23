@@ -1,7 +1,7 @@
-image: docker:19.03.12
+# image: docker:19.03.12
 
-services:
-  - docker:19.03.12-dind
+# services:
+#   - docker:19.03.12-dind
 
 stages:
   - build
@@ -32,7 +32,7 @@ variables:
 before_script:
   - echo "Before script section"
   - echo "For example you might run an update here or install a build dependency"
-  - echo "Or perhaps you might print out some debugging details"
+  - docker info
 
 after_script:
   - echo "After script section"
