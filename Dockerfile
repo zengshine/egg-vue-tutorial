@@ -3,10 +3,6 @@ FROM node:14.15.3
 ENV TIME_ZONE=Asia/Shanghai
 
 RUN \
-  apt-get update -qq && apt-get install -y build-essential \
-  && apt-get install -y libpq-dev
-
-RUN \
   mkdir -p /usr/src/egg-vue \
   && echo "${TIME_ZONE}" > /etc/timezone \
   && ln -sf /usr/share/zoneinfo/${TIME_ZONE} /etc/localtime
