@@ -4,7 +4,7 @@ ENV TIME_ZONE=Asia/Shanghai
 
 RUN \
   apt-get update -qq && apt-get install -y build-essential \
-  && apt-get install -y libpq-dev postgresql-client
+  && apt-get install -y libpq-dev
 
 RUN \
   mkdir -p /usr/src/egg-vue \
