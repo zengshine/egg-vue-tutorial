@@ -1,3 +1,5 @@
 **/*.d.ts
 node_modules/
 app/web/**/*.html
+public/
+logs/
