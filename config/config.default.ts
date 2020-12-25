@@ -12,8 +12,9 @@ export default (app: Application) => {
 
   config.cluster = {
     listen: {
-      port: 7000,
+      port: 7002,
     },
+    workers: 4,
   };
 
   // override config from framework / plugin

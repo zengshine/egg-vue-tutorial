@@ -1,13 +1,13 @@
 {
-  "common.js": "/public/js/chunk/common.f8b7bf7f.js",
-  "main/index.js": "/public/js/chunk/main/index.5d382520.js",
-  "runtime.js": "/public/js/runtime.00de9a33.js",
+  "common.js": "/public/js/chunk/common.js",
+  "main/index.js": "/public/js/chunk/main/index.js",
+  "runtime.js": "/public/js/runtime.js",
   "deps": {
     "main/index.js": {
       "js": [
-        "/public/js/runtime.00de9a33.js",
-        "/public/js/chunk/common.f8b7bf7f.js",
-        "/public/js/chunk/main/index.5d382520.js"
+        "/public/js/runtime.js",
+        "/public/js/chunk/common.js",
+        "/public/js/chunk/main/index.js"
       ],
       "css": []
     }
