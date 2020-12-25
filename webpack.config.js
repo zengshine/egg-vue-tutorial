@@ -22,7 +22,7 @@ module.exports = {
   },
   module: {
     rules: [
-      { babel: false },
+      { babel: true },
       { ts: true },
       {
         test: /\.scss$/,

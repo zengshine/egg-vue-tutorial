@@ -28,11 +28,11 @@
     // 匹配webpack alias
     "paths": {
       "@framework/*": ["app/web/framework/*"],
+      "@view/*": ["app/web/page/*"],
       "@asset/*": ["asset/*"],
       "@component/*": ["component/*"],
       "@store/*": ["page/store/*"],
       "@router/*": ["page/router/*"],
-      "@view/*": ["page/view/*"]
     }
   },
   "exclude": [

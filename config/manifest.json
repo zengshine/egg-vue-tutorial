@@ -1,11 +1,11 @@
 {
-  "main/index.js": "/public/js/chunk/main/index.59468ec3.js",
+  "main/index.js": "/public/js/chunk/main/index.4766250a.js",
   "runtime.js": "/public/js/runtime.00de9a33.js",
   "deps": {
     "main/index.js": {
       "js": [
         "/public/js/runtime.00de9a33.js",
-        "/public/js/chunk/main/index.59468ec3.js"
+        "/public/js/chunk/main/index.4766250a.js"
       ],
       "css": []
     }
