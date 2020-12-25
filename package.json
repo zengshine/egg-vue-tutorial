@@ -47,8 +47,8 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@easy-team/easywebpack-cli": "^4.5.2",
     "@easy-team/easywebpack-vue": "^4.1.0",
-    "@easy-team/easywebpack-cli": "^4.8.1",
     "@types/mocha": "^2.2.40",
     "@types/node": "^7.0.12",
     "@types/supertest": "^2.0.0",
@@ -58,6 +58,7 @@
     "autod-egg": "^1.1.0",
     "autoprefixer": "^10.0.4",
     "babel-core": "^7.0.0-bridge.0",
+    "clean-webpack-plugin": "^3.0.0",
     "commitlint-config-cz": "^0.13.2",
     "cross-env": "^7.0.3",
     "cz-customizable": "^6.3.0",

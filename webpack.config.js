@@ -1,6 +1,8 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
 const resolve = filepath => path.resolve(__dirname, filepath);
+
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = {
   egg: true,
   framework: 'vue',
@@ -36,5 +38,9 @@ module.exports = {
   },
   plugins: [
     { imagemini: false },
+    { clean: false },
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: [ path.join(process.cwd(), 'public/*'), path.join(process.cwd(), 'app/view/*') ],
+    }),
   ],
 };
