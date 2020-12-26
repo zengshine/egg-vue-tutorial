@@ -32,8 +32,8 @@ export const model = {
   },
 };
 
-export default (app, sequelize) => {
-  console.log(app);
+export default (...args) => {
+  const sequelize = args[1];
   const user = User.init(
     model.schema,
     {

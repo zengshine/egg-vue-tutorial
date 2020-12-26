@@ -13,6 +13,12 @@ variables:
   APP_PACKAGE_NAME: 'package'
   PACKAGE_MD5: '/package/md5'
 
+  group_name: 'zyh'
+  # 定义应用名称
+  app_name: 'egg-vue'
+  # 定义应用版本
+  app_version: '1.0.0'
+
   # When using dind service, we need to instruct docker to talk with
   # the daemon started inside of the service. The daemon is available
   # with a network connection instead of the default
@@ -31,42 +37,33 @@ variables:
 
 before_script:
   - echo "Before script section"
-  - echo "For example you might run an update here or install a build dependency"
   - docker info
 
 after_script:
   - echo "After script section"
-  - echo "For example you might do some cleanup here"
 
 build: # jobs
   image: node:14.15.3-alpine3.12
   stage: build
   only: # 定义在特定的分支上执行该jobs
     - main
-  before_script:
-    - echo "Before script in build stage that overwrited the globally defined before_script"
-  after_script:
-    - echo "After script in build stage that overwrited the globally defined after_script"
-  cache: # 配置缓存文件夹
+  cache: # 配置缓存文件夹，一般用于多个job之间的共享缓存
     key: ${CI_COMMIT_REF_SLUG}
     paths:
       - node_modules/
-  artifacts: # 将这个job生成的依赖传递给下一个job, 需要配置dependencies
-    expire_in: 60 mins # 设置过期时间，过期后依赖的数据将会被删除
-    paths: # 需要传递给下一个job的目录
-      - node_modules/
+  # artifacts: # 将这个job生成的依赖传递给下一个job, 需要配置dependencies，一般用于将job生成结果与其它job共享
+  #   expire_in: 60 mins # 设置过期时间，过期后依赖的数据将会被删除
+  #   paths: # 需要传递给下一个job的目录
+  #     - node_modules/
   script:
     - echo "========== start install package =========="
     - npm install --registry=https://registry.npm.taobao.org/
-    - echo "========== after install package =========="
     - echo "========== start build =========="
     - npm run build
     - echo "========== after build =========="
     - mkdir -p $DEPLOY_DIR
     - mv $BUILD_PATH/* $DEPLOY_DIR
     - tar zcf $APP_PACKAGE_NAME $DEPLOY_DIR
-    - mkdir -p $PACKAGE_MD5
-    - md5sum $APP_PACKAGE_NAME
   tags:
     - egg-vue
   when: manual
@@ -77,6 +74,13 @@ deploy: # jobs
     - main
   script:
     - echo "========== start deploy =========="
-    - docker build -t egg-vue .
-    - docker run -dit -p 7001:7002 egg-vue
-    # - npm run deploy
+    - echo "========== stop container =========="
+    - docker stop $app_name
+    - echo "========== remove container =========="
+    - docker rm $app_name
+    - echo "========== remove image =========="
+    - docker rm $group_name/$app_name:$app_version
+    - echo "========== build image =========="
+    - docker build -t $group_name/$app_name:$app_version .
+    - echo "========== create container =========="
+    - docker run -dit -p 7001:7002 --name $app_name

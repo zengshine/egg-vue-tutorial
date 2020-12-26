@@ -14,8 +14,10 @@ export default class HomeController extends Controller {
 
   public async server() {
     const { ctx } = this;
+
+    const url = ctx.request.url;
     // main/index.js 对应 webpack entry 的 main/index, 构建后文件存在 app/view 目录
-    await ctx.render('main/index.js', { message: 'egg vue server side render' });
+    await ctx.render('main/index.js', { message: 'egg vue server side render', url });
   }
 
   async client() {

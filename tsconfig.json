@@ -23,12 +23,13 @@
     "skipDefaultLibCheck": true,
     "inlineSourceMap": true,
     "importHelpers": true,
-    "baseUrl": ".",
+    "baseUrl": "",
     
     // 匹配webpack alias
     "paths": {
       "@framework/*": ["app/web/framework/*"],
       "@view/*": ["app/web/page/*"],
+      "@web/*": ["app/web/*"],
       "@asset/*": ["asset/*"],
       "@component/*": ["component/*"],
       "@store/*": ["page/store/*"],
@@ -38,7 +39,6 @@
   "exclude": [
     "app/public/*",
     "app/view/*",
-    "app/web/*",
     "node_modules/*",
     "database/*"
   ]

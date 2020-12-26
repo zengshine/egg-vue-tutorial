@@ -8,7 +8,6 @@ module.exports = {
   framework: 'vue',
   entry: {
     'main/index': 'app/web/page/main/index.ts',
-    // login: 'app/web/page/login/login.vue',
   },
   resolve: {
     alias: {
@@ -38,9 +37,11 @@ module.exports = {
   },
   plugins: [
     { imagemini: false },
+    // 关闭easywebpack内置的CleanWebpackPlugin配置
     { clean: false },
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [ path.join(process.cwd(), 'public/*'), path.join(process.cwd(), 'app/view/*') ],
     }),
   ],
 };
+

@@ -69,7 +69,6 @@ export default class App {
       router.push(initUrl);
       return new Promise(resolve => {
         router.onReady(() => {
-          console.log('server route on ready');
           this.fetch(vm).then(() => {
             context.state = store.state;
             return resolve(new Vue(vm));
