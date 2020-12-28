@@ -1,5 +1,7 @@
 import { Application, IBoot } from 'egg';
 
+const LocalStrategy = require('passport-local').Strategy;
+
 export default class AppBootHook implements IBoot {
   private readonly app: Application;
 
@@ -21,6 +23,34 @@ export default class AppBootHook implements IBoot {
    */
   configDidLoad() {
     this.app.logger.debug('app.js configDidLoad');
+
+    const { app } = this;
+
+    // 挂载 strategy
+    app.passport.use(new LocalStrategy({
+      passReqToCallback: true,
+    }, (req, username, password, done) => {
+      // format user
+      const user = {
+        provider: 'local',
+        username,
+        password,
+      };
+      app.passport.doVerify(req, user, done);
+    }));
+
+    // 处理用户信息
+    app.passport.verify(async (ctx, user) => {
+      console.log('verify', ctx, user);
+    });
+
+    app.passport.serializeUser(async (ctx, user) => {
+      console.log('serializeUser', ctx, user);
+    });
+
+    app.passport.deserializeUser(async (ctx, user) => {
+      console.log('deserializeUser', ctx, user);
+    });
   }
 
   /**

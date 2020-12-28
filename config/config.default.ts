@@ -19,7 +19,13 @@ export default (app: Application) => {
 
   // override config from framework / plugin
   // use for cookie sign key, should change to your own and keep security
-  config.keys = app.name + '_1606370673751_7521';
+  config.keys = app.name + '_1606370673751';
+
+  config.security = {
+    csrf: {
+      headerName: 'x-csrf-token', // 通过 header 传递 CSRF token 的默认字段为 x-csrf-token
+    },
+  };
 
   // add your egg config in here
   config.middleware = [
@@ -55,6 +61,12 @@ export default (app: Application) => {
         packetMiddleware: [],
       },
     },
+  };
+
+  // passport-github
+  config.passportGithub = {
+    key: 'd9b037cba030579cd57b', // github clientID
+    secret: 'e1393358696b6cb29d8635780cf0a2297d4b0d40', // github secret
   };
 
   // 配置日志

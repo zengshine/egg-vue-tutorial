@@ -8,12 +8,15 @@ module.exports = {
   framework: 'vue',
   entry: {
     'main/index': 'app/web/page/main/index.ts',
+    login: 'app/web/page/login/index.ts',
   },
   resolve: {
     alias: {
       '@': resolve('./'),
       '@web': resolve('app/web'),
       '@view': resolve('app/web/page'),
+      '@page': resolve('app/web/page'),
+      '@config': resolve('app/web/config'),
       '@asset': resolve('app/web/asset'),
       '@framework': resolve('app/web/framework'),
       '@component': resolve('app/web/component'),

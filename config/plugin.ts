@@ -22,6 +22,18 @@ const plugin: EggPlugin = {
     package: 'egg-sequelize',
   },
 
+  // password
+  passport: {
+    enable: true,
+    package: 'egg-passport',
+  },
+
+  // password-github
+  passportGithub: {
+    enable: true,
+    package: 'egg-passport-github',
+  },
+
   // vue服务端渲染插件
   vuessr: {
     enable: true,

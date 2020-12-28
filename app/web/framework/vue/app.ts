@@ -67,6 +67,7 @@ export default class App {
       const { url } = context.state;
       const initUrl = url || '/';
       router.push(initUrl);
+
       return new Promise(resolve => {
         router.onReady(() => {
           this.fetch(vm).then(() => {

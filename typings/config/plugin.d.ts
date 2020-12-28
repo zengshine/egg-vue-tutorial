@@ -16,6 +16,8 @@ import 'egg-jsonp';
 import 'egg-view';
 import 'egg-validate';
 import 'egg-sequelize';
+import 'egg-passport';
+import 'egg-passport-github';
 import 'egg-view-vue-ssr';
 import 'egg-view-nunjucks';
 import 'egg-webpack';
@@ -38,6 +40,8 @@ declare module 'egg' {
     validate?: EggPluginItem;
     io?: EggPluginItem;
     sequelize?: EggPluginItem;
+    passport?: EggPluginItem;
+    passportGithub?: EggPluginItem;
     vuessr?: EggPluginItem;
     nunjucks?: EggPluginItem;
     webpack?: EggPluginItem;
