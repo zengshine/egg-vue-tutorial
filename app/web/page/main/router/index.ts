@@ -5,12 +5,12 @@ export default {
     {
       name: 'main',
       path: '',
-      component: () => import('@view/main/view/chat/index.vue'),
+      component: () => import('@page/main/view/chat/index.vue'),
       children: [
         {
           name: 'chat',
           path: '/chat',
-          component: () => import('@view/main/view/chat/index.vue'),
+          component: () => import('@page/main/view/chat/index.vue'),
         },
       ],
     },

@@ -7,7 +7,7 @@ import {
 
 interface UserAttributes {
   id: number,
-  name: string
+  name: string,
 }
 
 interface UserCreationAttributes extends Optional<UserAttributes, 'id'> {}
@@ -28,6 +28,14 @@ export const model = {
     name: {
       type: new DataTypes.STRING(128),
       allowNull: false,
+    },
+    updatedAt: {
+      field: 'update_at',
+      type: DataTypes.DATE,
+    },
+    createdAt: {
+      field: 'created_at',
+      type: DataTypes.DATE,
     },
   },
 };

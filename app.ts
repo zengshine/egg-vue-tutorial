@@ -29,6 +29,8 @@ export default class AppBootHook implements IBoot {
     // 挂载 strategy
     app.passport.use(new LocalStrategy({
       passReqToCallback: true,
+      usernameField: 'username',
+      passwordField: 'password',
     }, (req, username, password, done) => {
       // format user
       const user = {
@@ -41,15 +43,29 @@ export default class AppBootHook implements IBoot {
 
     // 处理用户信息
     app.passport.verify(async (ctx, user) => {
-      console.log('verify', ctx, user);
+      this.app.logger.debug('verify', ctx, user);
+      console.log('verify==========================>', user);
+      // await ctx.service.user.create({ name: 'name' });
+      const userInfo = await ctx.service.user.model.findOne({
+        where: { name: user.username },
+      });
+
+      // 用户不存在
+      if (!userInfo) return false;
+
+      return userInfo;
     });
 
     app.passport.serializeUser(async (ctx, user) => {
-      console.log('serializeUser', ctx, user);
+      this.app.logger.debug('serializeUser', ctx, user);
+      console.log('serializeUser==========================>', user);
+      return user;
     });
 
     app.passport.deserializeUser(async (ctx, user) => {
-      console.log('deserializeUser', ctx, user);
+      this.app.logger.debug('deserializeUser', ctx, user);
+      console.log('deserializeUser==========================>', user);
+      return user;
     });
   }
 
@@ -58,7 +74,7 @@ export default class AppBootHook implements IBoot {
    * 可以在此方法: 加载应用自定义的文件，启动自定义的服务
    */
   async didLoad() {
-    this.app.logger.debug('app.js didLoad');
+    this.app.logger.debug('app.js didLoad =============>');
     this.app.logger.info('app.js didLoad');
   }
 

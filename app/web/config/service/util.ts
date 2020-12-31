@@ -33,7 +33,8 @@ function replaceRestPrams(url, restParams) {
 
 /**
 * 非ajax请求
-* @param {Object} apiConfig api初始配置
+* @param {Object} url 基础url
+* @param {Object} params 查询参数
 * @return {String} 返回请求url
 */
 function getDirectRequestURL(url, params = {}) {

@@ -1,9 +1,9 @@
-import { Service } from 'egg';
+import BaseService from './base';
 
-class UserService extends Service {
-  async query(params: any) {
-    return params;
+export default class UserService extends BaseService {
+  constructor(ctx) {
+    super(ctx, {
+      name: 'User',
+    });
   }
 }
-
-export default UserService;

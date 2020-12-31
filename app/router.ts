@@ -12,8 +12,12 @@ export default (app: Application) => {
   // router.get('/passport/github', github);
   // router.get('/passport/github/callback', github);
 
-  router.get('/', controller.main.index);
+  // 登录鉴权相关路由配置
   router.get('/login', controller.login.login);
+  router.get('/verify', controller.login.verify);
+  router.post('/login', app.passport.authenticate('local', { successRedirect: '/verify' }));
+
+  router.get('/', controller.main.index);
   router.get('/client', controller.main.client);
   router.get('/main(/.+)?', controller.main.server);
   router.resources('user', 'api/v1/user', controller.user);

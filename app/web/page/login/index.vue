@@ -2,10 +2,14 @@
   <Layout>
     <main class="main-wrapper h-p-100">
       <div>
-        <input v-model="form.userName"
-               type="text">
-        <input v-model="form.password"
-               type="text">
+        <div>
+          <input v-model="form.username"
+                 type="text">
+        </div>
+        <div>
+          <input v-model="form.password"
+                 type="text">
+        </div>
         <button @click="submit">
           提交
         </button>
@@ -27,15 +31,19 @@ export default {
   data() {
     return {
       form: {
-        userName: '',
-        password: '',
+        username: 'admin1',
+        password: 'admin',
       },
     };
   },
 
   methods: {
-    submit() {
-      $api.login(this.form);
+    async submit() {
+      const res = await $api.login(this.form);
+      const { data } = res.data;
+      if (data.redirectUrl) {
+        // window.location.href = data.redirectUrl;
+      }
     },
   },
 };

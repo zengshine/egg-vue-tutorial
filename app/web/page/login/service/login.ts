@@ -11,9 +11,7 @@ import moduleFactory from '@config/service/moduleFactory';
 const apiConfig = {
 
   // 获取Vue版本信息
-  login: { method: 'post', url: '/login', headers: {
-    'x-csrf-token': 'ODEaNhdS20Bi23rIFuKyGz6F',
-  } },
+  login: { method: 'post', url: '/login' },
 };
 
 const apiModule = moduleFactory(apiConfig) as service;

@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import Navigation from '@view/main/view/navigation/index.vue';
+import Navigation from '@page/main/view/navigation/index.vue';
 export default {
   name: 'App',
 

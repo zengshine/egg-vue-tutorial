@@ -3,10 +3,12 @@
   "compilerOptions": {
     "target": "es2017",
     "module": "commonjs",
+    "moduleResolution":"node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "noImplicitAny": false,
+    "noImplicitThis": false,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "charset": "utf8",
@@ -27,6 +29,7 @@
     
     // 匹配webpack alias
     "paths": {
+      "@app/*": ["app/*"],
       "@framework/*": ["app/web/framework/*"],
       "@view/*": ["app/web/page/*"],
       "@page/*": ["app/web/page/*"],
@@ -39,6 +42,7 @@
     }
   },
   "exclude": [
+    "app/web/*",
     "app/public/*",
     "app/view/*",
     "node_modules/*",

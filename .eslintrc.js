@@ -10,7 +10,12 @@ module.exports = {
   },
 
   rules: {
+    // 允许使用require模块引用语法
     "@typescript-eslint/no-var-requires": 0,
+
+    // 允许使用debugger声明断点
+    "no-debugger": 0,
+
     "spaced-comment": ["error", "always"],
 
     // 强制注释周围有空行

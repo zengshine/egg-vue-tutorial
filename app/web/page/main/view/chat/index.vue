@@ -2,6 +2,7 @@
   <column class="h-p-100">
     <template #nav>
       <div class="home-wrapper">
+        <div>test</div>
         <chat-card v-for="(item, index) of chatList"
                    :key="index"
                    :data="item" />

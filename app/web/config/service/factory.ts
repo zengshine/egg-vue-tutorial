@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '@web/plugins/axios';
 
 import API_BASIC_URL from '@config/url/api';
 import { DEFAULT_CONFIG, QUERYPARAMS_METHODS } from './config';

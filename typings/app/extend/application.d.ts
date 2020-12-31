@@ -2,7 +2,7 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
-import ExtendApplication from '../../../app/extend/application';
+import ExtendApplication = require('../../../app/extend/application');
 type ExtendApplicationType = typeof ExtendApplication;
 declare module 'egg' {
   interface Application extends ExtendApplicationType { }

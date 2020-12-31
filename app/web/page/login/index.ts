@@ -8,7 +8,7 @@ import SSRBuilder from '@framework/vue/app';
 
 import Layout from '@web/template/server/index.vue';
 
-import App from '@view/login/index.vue';
+import App from '@page/login/index.vue';
 
 import storeOptions from './store';
 

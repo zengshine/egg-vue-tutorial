@@ -6,13 +6,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   egg: true,
   framework: 'vue',
+  devtool: 'source-map',
   entry: {
     'main/index': 'app/web/page/main/index.ts',
     login: 'app/web/page/login/index.ts',
   },
   resolve: {
     alias: {
-      '@': resolve('./'),
+      '@app': resolve('app'),
       '@web': resolve('app/web'),
       '@view': resolve('app/web/page'),
       '@page': resolve('app/web/page'),
