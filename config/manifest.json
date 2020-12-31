@@ -1,22 +1,30 @@
 {
-  "common.js": "/public/js/chunk/common.f8b7bf7f.js",
-  "login.js": "/public/js/chunk/login.64df7e86.js",
-  "main/index.js": "/public/js/chunk/main/index.765f2cba.js",
-  "runtime.js": "/public/js/runtime.00de9a33.js",
+  "common.js": "/public/common.bundle.fdfd2b6ec0863b2c5069.js",
+  "common.js.map": "/public/common.bundle.fdfd2b6ec0863b2c5069.js.map",
+  "login.js": "/public/js/chunk/login.js",
+  "login.js.map": "/public/js/chunk/login.js.map",
+  "main/index.js": "/public/js/chunk/main/index.js",
+  "main/index.js.map": "/public/js/chunk/main/index.js.map",
+  "runtime.js": "/public/js/runtime.js",
+  "runtime.js.map": "/public/js/runtime.js.map",
+  "vendor.js": "/public/js/vendor.js",
+  "vendor.js.map": "/public/js/vendor.js.map",
   "deps": {
     "main/index.js": {
       "js": [
-        "/public/js/runtime.00de9a33.js",
-        "/public/js/chunk/common.f8b7bf7f.js",
-        "/public/js/chunk/main/index.765f2cba.js"
+        "/public/js/vendor.js",
+        "/public/js/runtime.js",
+        "/public/common.bundle.fdfd2b6ec0863b2c5069.js",
+        "/public/js/chunk/main/index.js"
       ],
       "css": []
     },
     "login.js": {
       "js": [
-        "/public/js/runtime.00de9a33.js",
-        "/public/js/chunk/common.f8b7bf7f.js",
-        "/public/js/chunk/login.64df7e86.js"
+        "/public/js/vendor.js",
+        "/public/js/runtime.js",
+        "/public/common.bundle.fdfd2b6ec0863b2c5069.js",
+        "/public/js/chunk/login.js"
       ],
       "css": []
     }

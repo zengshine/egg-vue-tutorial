@@ -6,10 +6,25 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   egg: true,
   framework: 'vue',
-  devtool: 'source-map',
   entry: {
     'main/index': 'app/web/page/main/index.ts',
     login: 'app/web/page/login/index.ts',
+  },
+  devtool: 'source-map',
+  dll: [ 'vue', 'vuex', 'axios' ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          name: 'common',
+          test: /[\\/]node_modules[\\/]/,
+          chunks: 'all',
+          minSize: 1,
+          minChunks: 1,
+          filename: '[name].bundle.[hash].js',
+        },
+      },
+    },
   },
   resolve: {
     alias: {
