@@ -2,7 +2,7 @@
 import {
   Model,
   Optional,
-  DataTypes,
+  DataTypes
 } from 'sequelize';
 
 interface UserAttributes {
@@ -23,21 +23,21 @@ export const model = {
     id: {
       type: DataTypes.INTEGER.UNSIGNED,
       autoIncrement: true,
-      primaryKey: true,
+      primaryKey: true
     },
     name: {
       type: new DataTypes.STRING(128),
-      allowNull: false,
+      allowNull: false
     },
     updatedAt: {
       field: 'update_at',
-      type: DataTypes.DATE,
+      type: DataTypes.DATE
     },
     createdAt: {
       field: 'created_at',
-      type: DataTypes.DATE,
-    },
-  },
+      type: DataTypes.DATE
+    }
+  }
 };
 
 export default (...args) => {
@@ -46,8 +46,8 @@ export default (...args) => {
     model.schema,
     {
       tableName: model.name,
-      sequelize,
-    },
+      sequelize
+    }
   );
 
   return user;

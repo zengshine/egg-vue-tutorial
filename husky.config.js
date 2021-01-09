@@ -1,9 +1,9 @@
 module.exports = {
-  "hooks": {
-    "pre-commit": "npm run lint",
+  hooks: {
+    'pre-commit': 'lint-staged',
 
-    //"prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+    // "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
 
-    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+    'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS'
   }
-}
+};

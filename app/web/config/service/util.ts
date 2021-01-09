@@ -58,5 +58,5 @@ function isMethodValid(method) {
 export {
   replaceRestPrams,
   getDirectRequestURL,
-  isMethodValid,
+  isMethodValid
 };

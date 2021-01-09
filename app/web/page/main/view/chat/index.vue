@@ -1,8 +1,7 @@
 <template>
   <column class="h-p-100">
     <template #nav>
-      <div class="home-wrapper">
-        <div>test</div>
+      <div class="chat-box__wrapper page__wrapper h-p-100">
         <chat-card v-for="(item, index) of chatList"
                    :key="index"
                    :data="item" />
@@ -15,16 +14,16 @@
 import Column from '@view/main/components/layout/columns';
 import ChatCard from '@view/main/view/chat/components/chat-card/index.vue';
 export default {
-  name: 'Server',
+  name: 'Chat',
 
   components: {
     Column,
-    ChatCard,
+    ChatCard
   },
 
   data() {
     return {
-      chatList: [],
+      chatList: []
     };
   },
 
@@ -40,17 +39,20 @@ export default {
     getChatList() {
       this.chatList = Array(1).fill({
         name: '知云网络',
-        message: '深圳知云网络科技有限公司万科云创',
+        message: '深圳知云网络科技有限公司万科云创'
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
 
 <style lang="scss">
-.home-wrapper {
+.page__wrapper {
+  background: rgba(195, 191, 191, .1);
+}
+
+.chat-box__wrapper {
   width: 300px;
-  background:#EDEAE8;
 }
 </style>

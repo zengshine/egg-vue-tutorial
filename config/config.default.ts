@@ -12,9 +12,9 @@ export default (app: Application) => {
 
   config.cluster = {
     listen: {
-      port: 7002,
+      port: 7002
     },
-    workers: 4,
+    workers: 4
   };
 
   // override config from framework / plugin
@@ -23,33 +23,33 @@ export default (app: Application) => {
 
   config.security = {
     csrf: {
-      headerName: 'x-csrf-token', // 通过 header 传递 CSRF token 的默认字段为 x-csrf-token
-    },
+      headerName: 'x-csrf-token' // 通过 header 传递 CSRF token 的默认字段为 x-csrf-token
+    }
   };
 
   // add your egg config in here
   config.middleware = [
-    'gzip',
+    'gzip'
   ];
 
   // 配置静态资源路径
   config.static = {
     prefix: '/public/',
-    dir: path.join(app.baseDir, 'public'),
+    dir: path.join(app.baseDir, 'public')
   };
 
   // 配置vuessr插件
   config.vuessr = {
     layout: path.resolve(app.baseDir, 'app/web/template/client/index.html'),
     renderOptions: {
-      basedir: path.join(app.baseDir, 'app/view'),
-    },
+      basedir: path.join(app.baseDir, 'app/view')
+    }
   };
 
   // 配置egg-webpack
   config.webpack = {
     browser: false,
-    webpackConfigList: getWebpackConfig(),
+    webpackConfigList: getWebpackConfig()
   };
 
   // 配置socket.io
@@ -58,29 +58,29 @@ export default (app: Application) => {
     namespace: {
       '/': {
         connectionMiddleware: [],
-        packetMiddleware: [],
-      },
-    },
+        packetMiddleware: []
+      }
+    }
   };
 
   // passport-github
   config.passportGithub = {
     key: 'd9b037cba030579cd57b', // github clientID
-    secret: 'e1393358696b6cb29d8635780cf0a2297d4b0d40', // github secret
+    secret: 'e1393358696b6cb29d8635780cf0a2297d4b0d40' // github secret
   };
 
   // 配置日志
   config.logger = {
     disableConsoleAfterReady: false,
-    level: 'DEBUG',
+    level: 'DEBUG'
   };
 
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${app.name}`,
     gzip: {
-      threshold: 1024,
-    },
+      threshold: 1024
+    }
   };
 
   config.sequelize = dbConfig.development as EggSequelizeOptions;
@@ -88,6 +88,6 @@ export default (app: Application) => {
   // the return config will combines to EggAppConfig
   return {
     ...config,
-    ...bizConfig,
+    ...bizConfig
   };
 };

@@ -13,6 +13,8 @@ import Layout from '@web/template/server/index.vue';
 
 import App from '@view/main/index.vue';
 
+import '@web/style/atom.scss';
+
 Vue.use(Vuex);
 
 Vue.use(VueRouter);
@@ -28,6 +30,6 @@ export default new SSRBuilder({
   Vue,
   router,
   store,
-  entry: App,
+  entry: App
 }).bootstrap();
 

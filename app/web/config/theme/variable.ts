@@ -19,7 +19,7 @@ const keyMap = {
   normalTextColor: '--normal-text-color',
 
   // 边框
-  borderColor: '--border-color',
+  borderColor: '--border-color'
 };
 
 const light = {
@@ -32,12 +32,12 @@ const light = {
   [keyMap.linkTextColor]: '#297AFF',
   [keyMap.normalTextColor]: '#818181',
 
-  [keyMap.borderColor]: '#CECECE',
+  [keyMap.borderColor]: '#CECECE'
 };
 
 const dark = {};
 
 export default {
   dark,
-  light,
+  light
 };

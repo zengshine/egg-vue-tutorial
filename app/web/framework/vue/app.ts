@@ -24,7 +24,7 @@ export default class App {
       store,
       render: h => {
         return h(entry);
-      },
+      }
     };
   }
 
@@ -41,7 +41,7 @@ export default class App {
           return options.methods.fetchApi.call(component, { store, router, route: router.currentRoute });
         }
         return null;
-      }),
+      })
     );
   }
 

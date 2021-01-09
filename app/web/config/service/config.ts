@@ -10,7 +10,7 @@ const VALID_METHODS = [
   'options',
   'post',
   'put',
-  'patch',
+  'patch'
 ];
 
 // axios 默认采用queryPrams（{ params: { key: value } }）形式传参的方法
@@ -18,16 +18,16 @@ const QUERYPARAMS_METHODS = [
   'get',
   'delete',
   'head',
-  'options',
+  'options'
 ];
 
 // api配置项默认参数
 const DEFAULT_CONFIG = {
-  isMock: false,
+  isMock: false
 };
 
 export {
   VALID_METHODS,
   QUERYPARAMS_METHODS,
-  DEFAULT_CONFIG,
+  DEFAULT_CONFIG
 };

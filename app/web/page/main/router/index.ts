@@ -10,9 +10,9 @@ export default {
         {
           name: 'chat',
           path: '/chat',
-          component: () => import('@page/main/view/chat/index.vue'),
-        },
-      ],
-    },
-  ],
+          component: () => import('@page/main/view/chat/index.vue')
+        }
+      ]
+    }
+  ]
 };

@@ -7,9 +7,14 @@
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "editor.defaultFormatter": null,
+  "editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": true
+	},
   "cSpell.words": [
+    "Entrypoint",
     "Vuex",
     "Zeng",
+    "bundlesize",
     "commitlint",
     "csrf",
     "easywebpack",

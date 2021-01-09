@@ -15,7 +15,7 @@ import responseErrorInterceptor from '@config/axios/interceptors/responseError';
 const csrfToken = getCookie('csrfToken');
 
 const defaultConfig = {
-  headers: { 'x-csrf-token': csrfToken },
+  headers: { 'x-csrf-token': csrfToken }
 };
 
 const axiosInstance = axios.create(defaultConfig);

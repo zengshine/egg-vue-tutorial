@@ -22,15 +22,15 @@ export default {
   props: {
     data: {
       type: Object,
-      default: () => ({}),
-    },
+      default: () => ({})
+    }
   },
 
   data() {
     return {
 
     };
-  },
+  }
 };
 </script>
 <style lang='scss' scoped>

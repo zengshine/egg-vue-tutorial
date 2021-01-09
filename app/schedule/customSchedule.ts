@@ -3,7 +3,7 @@ import { Subscription } from 'egg';
 class CustomSchedule extends Subscription {
   static get schedule() {
     return {
-      type: 'customSchedule',
+      type: 'customSchedule'
     };
   }
 

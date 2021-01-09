@@ -28,6 +28,6 @@ export default new SSRBuilder({
   Vue,
   router,
   store,
-  entry: App,
+  entry: App
 }).bootstrap();
 

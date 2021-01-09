@@ -6,14 +6,12 @@
 </template>
 
 <script>
-
 export default {
   name: 'ClientTpl',
   data() {
     return {
-
     };
-  },
+  }
 };
 </script>
 <style lang='scss' scoped>

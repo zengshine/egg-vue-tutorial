@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout v-bind="meta">
     <main class="main-wrapper h-p-100">
       <nav class="main-nav">
         <navigation />
@@ -17,8 +17,16 @@ export default {
   name: 'App',
 
   components: {
-    Navigation,
+    Navigation
   },
+
+  data() {
+    return {
+      meta: {
+        title: '企知道'
+      }
+    };
+  }
 };
 </script>
 

@@ -5,7 +5,8 @@
     <slot />
   </server-tpl>
   <!-- 客户端渲染 -->
-  <client-tpl v-else>
+  <client-tpl v-else
+              v-bind="$attrs">
     <slot />
   </client-tpl>
 </template>
@@ -16,23 +17,24 @@ import ServerTpl from './server-tpl.vue';
 
 // eslint-disable-next-line no-undef
 const isNodeEnv = EASY_ENV_IS_NODE;
+
 export default {
   name: 'Layout',
 
   components: {
     ClientTpl,
-    ServerTpl,
+    ServerTpl
   },
 
   data() {
     return {
-      isNodeEnv,
+      isNodeEnv
     };
   },
 
   created() {
     console.log('>>EASY_ENV_IS_NODE create', isNodeEnv);
-  },
+  }
 };
 </script>
 

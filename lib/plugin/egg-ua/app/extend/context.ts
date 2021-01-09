@@ -5,5 +5,5 @@ export default {
     const iosReg = /iphone|ipad|ipod/i;
     const userAgent = this.get('user-agent');
     return iosReg.test(userAgent);
-  },
+  }
 };

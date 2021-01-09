@@ -16,7 +16,7 @@ class UserController extends Controller {
     const { query, params } = ctx;
     const result = service.user.query({
       query,
-      params,
+      params
     });
 
     ctx.body = result;

@@ -32,8 +32,8 @@ export default {
     return {
       form: {
         username: 'admin1',
-        password: 'admin',
-      },
+        password: 'admin'
+      }
     };
   },
 
@@ -44,8 +44,8 @@ export default {
       if (data.redirectUrl) {
         // window.location.href = data.redirectUrl;
       }
-    },
-  },
+    }
+  }
 };
 </script>
 

@@ -1,30 +1,25 @@
 {
-  "common.js": "/public/common.bundle.fdfd2b6ec0863b2c5069.js",
-  "common.js.map": "/public/common.bundle.fdfd2b6ec0863b2c5069.js.map",
-  "login.js": "/public/js/chunk/login.js",
-  "login.js.map": "/public/js/chunk/login.js.map",
-  "main/index.js": "/public/js/chunk/main/index.js",
-  "main/index.js.map": "/public/js/chunk/main/index.js.map",
-  "runtime.js": "/public/js/runtime.js",
-  "runtime.js.map": "/public/js/runtime.js.map",
-  "vendor.js": "/public/js/vendor.js",
-  "vendor.js.map": "/public/js/vendor.js.map",
+  "common.js": "/public/common.bundle.16364337f8e9a257849c.js",
+  "login.js": "/public/js/chunk/login.16de95b7.js",
+  "main/index.js": "/public/js/chunk/main/index.6b2ef7a3.js",
+  "runtime.js": "/public/js/runtime.ea6b4bea.js",
+  "vendor.js": "/public/js/vendor.477e0698.js",
   "deps": {
     "main/index.js": {
       "js": [
-        "/public/js/vendor.js",
-        "/public/js/runtime.js",
-        "/public/common.bundle.fdfd2b6ec0863b2c5069.js",
-        "/public/js/chunk/main/index.js"
+        "/public/js/vendor.477e0698.js",
+        "/public/js/runtime.ea6b4bea.js",
+        "/public/common.bundle.16364337f8e9a257849c.js",
+        "/public/js/chunk/main/index.6b2ef7a3.js"
       ],
       "css": []
     },
     "login.js": {
       "js": [
-        "/public/js/vendor.js",
-        "/public/js/runtime.js",
-        "/public/common.bundle.fdfd2b6ec0863b2c5069.js",
-        "/public/js/chunk/login.js"
+        "/public/js/vendor.477e0698.js",
+        "/public/js/runtime.ea6b4bea.js",
+        "/public/common.bundle.16364337f8e9a257849c.js",
+        "/public/js/chunk/login.16de95b7.js"
       ],
       "css": []
     }

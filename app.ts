@@ -30,13 +30,13 @@ export default class AppBootHook implements IBoot {
     app.passport.use(new LocalStrategy({
       passReqToCallback: true,
       usernameField: 'username',
-      passwordField: 'password',
+      passwordField: 'password'
     }, (req, username, password, done) => {
       // format user
       const user = {
         provider: 'local',
         username,
-        password,
+        password
       };
       app.passport.doVerify(req, user, done);
     }));
@@ -47,7 +47,7 @@ export default class AppBootHook implements IBoot {
       console.log('verify==========================>', user);
       // await ctx.service.user.create({ name: 'name' });
       const userInfo = await ctx.service.user.model.findOne({
-        where: { name: user.username },
+        where: { name: user.username }
       });
 
       // 用户不存在

@@ -48,13 +48,13 @@ function constructOptions(params, axiosConfig) {
 
   if (queryParams) {
     Object.assign(axiosConfig, {
-      params: queryParams,
+      params: queryParams
     });
   }
 
   if (bodyParams) {
     Object.assign(axiosConfig, {
-      data: bodyParams,
+      data: bodyParams
     });
   }
 
@@ -74,7 +74,7 @@ function service(requestParams, apiConfig) {
     const finalConfig = { ...DEFAULT_CONFIG, ...apiConfig };
     const {
       method,
-      url,
+      url
     } = finalConfig;
 
     // 方法名无效，退出执行

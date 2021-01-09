@@ -11,8 +11,8 @@ export default class LoginController extends Controller {
     const res: responseType = {
       code: 1,
       data: {
-        redirectUrl: '/main',
-      },
+        redirectUrl: '/main'
+      }
     };
     ctx.body = res;
   }
