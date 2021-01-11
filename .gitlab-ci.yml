@@ -74,12 +74,14 @@ deploy: # jobs
     - main
   script:
     - echo "========== start deploy =========="
-    - echo "========== stop container =========="
-    - docker stop $app_name
-    - echo "========== remove container =========="
-    - docker rm $app_name
+    - echo "========== stop & remove container =========="
+    - if [ "$(docker ps -a | grep $app_name" ]; then
+    - docker stop $app_name && docker rm $app_name
+    - fi
     - echo "========== remove image =========="
+    - if [ "$(docker images | grep $group_name/$app_name:$app_version)" ]; then
     - docker rm $group_name/$app_name:$app_version
+    - fi
     - echo "========== build image =========="
     - docker build -t $group_name/$app_name:$app_version .
     - echo "========== create container =========="
