@@ -10,6 +10,7 @@ npm-debug.log
 *.swp
 *.lock
 !.autod.conf.js
+debug.log
 
 app/**/*.js
 test/**/*.js

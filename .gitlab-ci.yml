@@ -85,4 +85,4 @@ deploy: # jobs
     - echo "========== build image =========="
     - docker build -t $group_name/$app_name:$app_version .
     - echo "========== create container =========="
-    - docker run -dit -p $group_name/$app_name:$app_version 7001:7002 --name $app_name
+    - docker run -dit -p 7001:7002 $group_name/$app_name:$app_version --name $app_name
