@@ -75,7 +75,7 @@ deploy: # jobs
   script:
     - echo "========== start deploy =========="
     - echo "========== stop & remove container =========="
-    - if [ "$(docker ps -a | grep $app_name" ]; then
+    - if [ "$(docker ps -a | grep $app_name)" ]; then
     - docker stop $app_name && docker rm $app_name
     - fi
     - echo "========== remove image =========="
