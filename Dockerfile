@@ -17,4 +17,4 @@ COPY . /usr/src/egg-vue
 
 EXPOSE 7001
 
-CMD ["npm", "run","serve"]
+CMD ["npm","start"]

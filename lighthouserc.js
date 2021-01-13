@@ -2,7 +2,7 @@ module.exports = {
   ci: {
     collect: {
       // 静态资源目录
-      staticDistDir: './public',
+      // staticDistDir: './public',
       startServerCommand: 'npm run start',
       startServerReadyPattern: 'egg started on http://127.0.0.1:7001',
       url: [ 'http://localhost:7001' ],
