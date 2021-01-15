@@ -78,7 +78,7 @@ deploy: # jobs
   script:
     - echo "******************** start deploy ********************"
 
-    - echo "******************** Dockerize Web "********************"
+    - echo "******************** Dockerize Web ********************"
 
     - echo "========== stop & remove container =========="
     - if [ "$(docker ps -a | grep $app_name)" ]; then

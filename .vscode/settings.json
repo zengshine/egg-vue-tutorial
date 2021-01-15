@@ -19,6 +19,7 @@
     "commitlint",
     "csrf",
     "easywebpack",
-    "imagemini"
+    "imagemini",
+    "mkdir"
   ]
 }
