@@ -13,4 +13,6 @@
 
 ### 常用命令
 
-- docker run --name nginx-container -p 80:80 -dit cus-nginx:v1.0.1
+> 查看退出容器的日志
+
+- docker logs -f -t --tail 50 cus_nginx
