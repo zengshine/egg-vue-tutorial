@@ -17,7 +17,7 @@ RUN npm i --registry=https://registry.npm.taobao.org
 
 COPY . /usr/src/egg-vue
 
-RUN npm run build
+RUN npm run build skipcache
 
 EXPOSE 7001
 
