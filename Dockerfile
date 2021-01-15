@@ -2,6 +2,8 @@ FROM node:14.15.3
 
 ENV TIME_ZONE=Asia/Shanghai
 
+# ENV APP_HOST = '8.135.3.155:80'
+
 RUN \
   mkdir -p /usr/src/egg-vue \
   && echo "${TIME_ZONE}" > /etc/timezone \

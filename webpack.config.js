@@ -1,6 +1,9 @@
 const path = require('path');
 const resolve = filepath => path.resolve(__dirname, filepath);
 
+// 引用环境变量
+const DotEnv = require('dotenv');
+DotEnv.config();
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -16,7 +19,7 @@ module.exports = {
   },
 
   output: {
-    publicPath: process.env.NODE_ENV === 'development' ? 'public' : 'http://localhost:80/public'
+    publicPath: process.env.NODE_ENV === 'development' ? 'public' : `http://${process.env.APP_HOST}/public`
   },
 
   devtool: 'source-map',

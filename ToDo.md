@@ -10,9 +10,3 @@
 ### CI/CD
 
 - lighthouse-ci 本地执行
-
-### 常用命令
-
-> 查看退出容器的日志
-
-- docker logs -f -t --tail 50 cus_nginx

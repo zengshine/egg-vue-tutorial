@@ -1,6 +1,4 @@
-# hackernews-async-ts
-
-[Hacker News](https://news.ycombinator.com/) showcase using typescript && egg
+# egg-vue-tutorial
 
 ## QuickStart
 
@@ -31,3 +29,19 @@ $ npm start
 
 - Node.js 8.x
 - Typescript 2.8+
+
+### 常用命令
+
+> 查看退出容器的日志
+
+- docker logs -f -t --tail 50 cus_nginx
+
+### Node 服务日志路径
+
+#### root 角色
+
+- /root/logs/
+
+#### 普通用户
+
+- /home/\${userName}/logs
