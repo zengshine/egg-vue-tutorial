@@ -94,7 +94,7 @@ deploy: # jobs
     - docker run -dit --name $app_name -p 7001:7001 $group_name/$app_name:$app_version
     - echo "========== copy static file to local machine =========="
 
-    - echo ******************** Dockerize Nginx ********************"
+    - echo "******************** Dockerize Nginx ********************"
 
     - echo "========== stop & remove container =========="
     - if [ "$(docker ps -a | grep $nginx_name)" ]; then
