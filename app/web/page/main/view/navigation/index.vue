@@ -18,6 +18,6 @@ export default {
 <style lang='scss' scoped>
 .nav-wrapper {
   height: 100%;
-  background: #26292B;
+  background: #26292b;
 }
 </style>

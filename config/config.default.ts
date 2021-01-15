@@ -12,7 +12,7 @@ export default (app: Application) => {
 
   config.cluster = {
     listen: {
-      port: 7002
+      port: 7001
     },
     workers: 4
   };

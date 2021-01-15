@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "ets && tsc -p tsconfig.json && easy build prod && egg-scripts start --title=egg-server-tutorial --port 7001",
-    "serve": "ets && tsc -p tsconfig.json && egg-scripts start --daemon --title=egg-server-tutorial --port 7001",
+    "serve": "npm run build && egg-scripts start --daemon --title=egg-server-tutorial --port 7001",
     "stop": "egg-scripts stop --title=egg-server-tutorial",
     "dev": "egg-bin dev -r egg-ts-helper/register",
     "build": "ets && tsc -p tsconfig.json && easy build prod",

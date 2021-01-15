@@ -12,7 +12,11 @@ module.exports = {
 
   entry: {
     'main/index': 'app/web/page/main/index.ts',
-    login: 'app/web/page/login/index.ts',
+    login: 'app/web/page/login/index.ts'
+  },
+
+  output: {
+    publicPath: process.env.NODE_ENV === 'development' ? 'public' : 'http://localhost:80/public'
   },
 
   devtool: 'source-map',
@@ -20,13 +24,13 @@ module.exports = {
   dll: [ 'vue', 'vuex', 'axios' ],
 
   performance: {
-    hints: process.env.NODE_ENV === 'development' ? 'warn' : 'error',
+    hints: process.env.NODE_ENV === 'development' ? 'warning' : 'error',
     maxEntrypointSize: 1024 * 178,
     maxAssetSize: 1024 * 200,
     assetFilter(assetFilename) {
       // 计算资源匹配规则
       return assetFilename.endsWith('.js');
-    },
+    }
   },
 
   optimization: {
@@ -38,7 +42,7 @@ module.exports = {
           chunks: 'all',
           minSize: 1,
           minChunks: 1,
-          filename: '[name].bundle.[hash].js',
+          filename: '[name].bundle.[hash].js'
         },
         styles:
         {
@@ -47,10 +51,10 @@ module.exports = {
           minChunks: 2,
           test: /\.(css|less|scss|stylus)$/,
           enforce: true,
-          priority: 50,
-        },
-      },
-    },
+          priority: 50
+        }
+      }
+    }
   },
 
   resolve: {
@@ -60,14 +64,15 @@ module.exports = {
     alias: {
       '@app': resolve('app'),
       '@web': resolve('app/web'),
+      '@assets': resolve('app/web/assets'),
       '@view': resolve('app/web/page'),
       '@page': resolve('app/web/page'),
       '@config': resolve('app/web/config'),
       '@asset': resolve('app/web/asset'),
       '@framework': resolve('app/web/framework'),
       '@component': resolve('app/web/component'),
-      '@store': resolve('app/web/page/store'),
-    },
+      '@store': resolve('app/web/page/store')
+    }
   },
 
   module: {
@@ -79,11 +84,11 @@ module.exports = {
         use: [
           'vue-style-loader',
           'css-loader',
-          'sass-loader',
+          'sass-loader'
         ],
-        include: resolve('app/web'),
-      },
-    ],
+        include: resolve('app/web')
+      }
+    ]
   },
 
   plugins: [
@@ -92,14 +97,14 @@ module.exports = {
     // 关闭easywebpack内置的CleanWebpackPlugin配置
     { clean: false },
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [ path.join(process.cwd(), 'public/*'), path.join(process.cwd(), 'app/view/*') ],
+      cleanOnceBeforeBuildPatterns: [ path.join(process.cwd(), 'public/*'), path.join(process.cwd(), 'app/view/*') ]
     }),
 
     { extract: false },
     // 将css提取成独立文件
     new MiniCssExtractPlugin({
-      filename: 'style-[name]-[contentHash].css',
-    }),
-  ],
+      filename: 'style-[name]-[contentHash].css'
+    })
+  ]
 };
 

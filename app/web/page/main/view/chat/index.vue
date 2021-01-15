@@ -49,7 +49,7 @@ export default {
 
 <style lang="scss">
 .page__wrapper {
-  background: rgba(195, 191, 191, .1);
+  background: url("~@assets/images/main/bg.jpeg") no-repeat left center / cover;
 }
 
 .chat-box__wrapper {

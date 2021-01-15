@@ -10,3 +10,7 @@
 ### CI/CD
 
 - lighthouse-ci 本地执行
+
+### 常用命令
+
+- docker run --name nginx-container -p 80:80 -dit cus-nginx:v1.0.1

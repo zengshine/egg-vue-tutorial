@@ -19,6 +19,9 @@ variables:
   # 定义应用版本
   app_version: '1.0.0'
 
+  # nginx容器名称
+  nginx_name: 'cus_nginx'
+
   # When using dind service, we need to instruct docker to talk with
   # the daemon started inside of the service. The daemon is available
   # with a network connection instead of the default
@@ -73,16 +76,35 @@ deploy: # jobs
   only:
     - main
   script:
-    - echo "========== start deploy =========="
+    - echo "******************** start deploy ********************"
+
+    - echo "******************** Dockerize Web "********************"
+
     - echo "========== stop & remove container =========="
     - if [ "$(docker ps -a | grep $app_name)" ]; then
     - docker stop $app_name && docker rm $app_name
     - fi
-    - echo "========== remove image =========="
+    - echo "========== remove app image =========="
     - if [ "$(docker images | grep $group_name/$app_name:$app_version)" ]; then
     - docker rmi $group_name/$app_name:$app_version
     - fi
-    - echo "========== build image =========="
+    - echo "========== build app image =========="
     - docker build -t $group_name/$app_name:$app_version .
-    - echo "========== create container =========="
+    - echo "========== create app container =========="
     - docker run -dit --name $app_name -p 7001:7001 $group_name/$app_name:$app_version
+    - echo "========== copy static file to local machine =========="
+
+    - echo ******************** Dockerize Nginx ********************"
+
+    - echo "========== stop & remove container =========="
+    - if [ "$(docker ps -a | grep $nginx_name)" ]; then
+    - docker stop $nginx_name && docker rm $nginx_name
+    - fi
+    - echo "========== remove image =========="
+    - if [ "$(docker images | grep $group_name/$nginx_name:$app_version)" ]; then
+    - docker rmi $group_name/$nginx_name:$app_version
+    - fi
+    - echo "========== build image =========="
+    - docker build -t $group_name/$nginx_name:$app_version -f nginx/Dockerfile .
+    - echo "========== create container =========="
+    - docker run --name $nginx_name -p 80:80 -dit $group_name/$nginx_name:$app_version

@@ -20,19 +20,8 @@ export default () => {
       // match: /^\/public\//, // path pattern.
     },
     devServer: {
-      before: app => {
-        app.use(function* (next) {
-          // 配置koa跨域
-          const ctx: any = this as object;
-          ctx.set('Access-Control-Allow-Origin', '*');
-          ctx.set('Access-Control-Allow-Headers', '*');
-          ctx.set('Access-Control-Allow-Methods', '*');
-          if (ctx.method === 'OPTIONS') {
-            ctx.body = 200;
-          } else {
-            yield* next;
-          }
-        });
+      before: () => {
+        console.log('devServer before');
       }
     }
   };

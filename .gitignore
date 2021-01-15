@@ -12,6 +12,7 @@ npm-debug.log
 !.autod.conf.js
 debug.log
 
+app/view
 app/**/*.js
 test/**/*.js
 config/**/*.js

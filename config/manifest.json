@@ -1,31 +1,32 @@
 {
-  "common.js": "/public/common.bundle.16364337f8e9a257849c.js",
-  "login.js": "/public/js/chunk/login.16de95b7.js",
-  "main/index.js": "/public/js/chunk/main/index.6b2ef7a3.js",
-  "runtime.js": "/public/js/runtime.ea6b4bea.js",
-  "vendor.js": "/public/js/vendor.477e0698.js",
+  "common.js": "http://localhost:80/public/common.bundle.d7db74aaf619667add3c.js",
+  "login.js": "http://localhost:80/public/js/chunk/login.16de95b7.js",
+  "main/index.js": "http://localhost:80/public/js/chunk/main/index.a1833438.js",
+  "runtime.js": "http://localhost:80/public/js/runtime.f931447f.js",
+  "img/bg.jpeg": "http://localhost:80/public/img/bg.fa1cca2c.jpeg",
+  "vendor.js": "http://localhost:80/public/js/vendor.e93c7bf1.js",
   "deps": {
     "main/index.js": {
       "js": [
-        "/public/js/vendor.477e0698.js",
-        "/public/js/runtime.ea6b4bea.js",
-        "/public/common.bundle.16364337f8e9a257849c.js",
-        "/public/js/chunk/main/index.6b2ef7a3.js"
+        "http://localhost:80/public/js/vendor.e93c7bf1.js",
+        "http://localhost:80/public/js/runtime.f931447f.js",
+        "http://localhost:80/public/common.bundle.d7db74aaf619667add3c.js",
+        "http://localhost:80/public/js/chunk/main/index.a1833438.js"
       ],
       "css": []
     },
     "login.js": {
       "js": [
-        "/public/js/vendor.477e0698.js",
-        "/public/js/runtime.ea6b4bea.js",
-        "/public/common.bundle.16364337f8e9a257849c.js",
-        "/public/js/chunk/login.16de95b7.js"
+        "http://localhost:80/public/js/vendor.e93c7bf1.js",
+        "http://localhost:80/public/js/runtime.f931447f.js",
+        "http://localhost:80/public/common.bundle.d7db74aaf619667add3c.js",
+        "http://localhost:80/public/js/chunk/login.16de95b7.js"
       ],
       "css": []
     }
   },
   "info": {
-    "publicPath": "/public/",
+    "publicPath": "http://localhost:80/public/",
     "buildPath": "public",
     "mapped": true
   }
