@@ -8,7 +8,8 @@ stages:
   - deploy
 
 variables:
-  DEPLOY_DIR: '/www/egg-vue'
+  DEPLOY_DIR: '/usr/src/egg-vue'
+  STATIC_DIR: '/usr/src/egg-vue/public'
   BUILD_PATH: './public'
   APP_PACKAGE_NAME: 'package'
   PACKAGE_MD5: '/package/md5'
@@ -93,6 +94,8 @@ deploy: # jobs
     - echo "========== create app container =========="
     - docker run -dit --name $app_name -p 7001:7001 $group_name/$app_name:$app_version
     - echo "========== copy static file to local machine =========="
+    - docker cp $app_name:$STATIC_DIR .
+    - ls
 
     - echo "******************** Dockerize Nginx ********************"
 
