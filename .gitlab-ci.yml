@@ -111,7 +111,7 @@ deploy: # jobs
     - echo "========== build image =========="
     - docker build -t $group_name/$nginx_name:$app_version -f nginx/Dockerfile .
     - echo "========== create container =========="
-    - ls $DOCKER_TLS_CERTDIR
+    - sudo ls $DOCKER_TLS_CERTDIR
     - >
       docker run --name $nginx_name
       --volume $DOCKER_TLS_CERTDIR:/etc/nginx/certs
