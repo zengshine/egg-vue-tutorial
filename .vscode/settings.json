@@ -21,6 +21,7 @@
     "csrf",
     "easywebpack",
     "imagemini",
-    "mkdir"
+    "mkdir",
+    "nounknow"
   ]
 }

@@ -38,7 +38,7 @@ variables:
   # `/certs/client` that will be shared between the service and job
   # container, thanks to volume mount from config.toml
   # ssl 证书文件夹
-  DOCKER_TLS_CERTDIR: '/etc/letsencrypt'
+  DOCKER_TLS_CERTDIR: '/etc/letsencrypt/live/www.nounknow.fun'
 
 before_script:
   - echo "Before script section"
