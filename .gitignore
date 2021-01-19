@@ -1,18 +1,21 @@
 .idea/
 .vscode
+.lighthouseci
+
 node_modules/
 logs/
 coverage/
 run/
 
-npm-debug.log
 .DS_Store
 *.swp
 *.lock
 !.autod.conf.js
+npm-debug.log
 debug.log
 
 app/view
+public/
 app/**/*.js
 test/**/*.js
 config/**/*.js
@@ -20,7 +23,6 @@ lib/**/*.js
 app/**/*.map
 test/**/*.map
 config/**/*.map
-public/
 
 app.js
 agent.js
