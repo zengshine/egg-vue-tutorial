@@ -4,7 +4,6 @@ const resolve = filepath => path.resolve(__dirname, filepath);
 // 引用环境变量
 const DotEnv = require('dotenv');
 DotEnv.config();
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -109,11 +108,7 @@ module.exports = {
     { imagemini: false },
 
     // 关闭easywebpack内置的CleanWebpackPlugin配置
-    { clean: false },
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [ path.join(process.cwd(), 'public/*'), path.join(process.cwd(), 'app/view/*') ]
-    }),
-
+    { clean: true },
     { extract: false },
     // 将css提取成独立文件
     new MiniCssExtractPlugin({

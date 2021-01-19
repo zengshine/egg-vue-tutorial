@@ -69,7 +69,7 @@
     "autoprefixer": "^10.0.4",
     "babel-core": "^7.0.0-bridge.0",
     "bundlesize": "^0.18.1",
-    "clean-webpack-plugin": "^3.0.0",
+    "clean-webpack-plugin": "1.0.0",
     "commitlint-config-cz": "^0.13.2",
     "cross-env": "^7.0.3",
     "cz-customizable": "^6.3.0",
