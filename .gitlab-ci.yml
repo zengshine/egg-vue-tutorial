@@ -114,7 +114,7 @@ deploy: # jobs
     - sudo ls $DOCKER_TLS_CERTDIR
     - >
       docker run --name $nginx_name
-      --volume $DOCKER_TLS_CERTDIR:/etc/nginx/certs
+      --mount type=bind,source=$DOCKER_TLS_CERTDIR,target=/etc/nginx/certs
       -p 80:80
       -dit
       $group_name/$nginx_name:$app_version
