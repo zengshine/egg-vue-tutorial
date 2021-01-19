@@ -113,7 +113,7 @@ deploy: # jobs
     - echo "========== create container =========="
     - >
       docker run --name $nginx_name
-      -- volume $DOCKER_TLS_CERTDIR:/etc/nginx/certs
+      --volume $DOCKER_TLS_CERTDIR:/etc/nginx/certs
       -p 80:80
       -dit
       $group_name/$nginx_name:$app_version
