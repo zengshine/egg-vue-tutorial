@@ -111,8 +111,9 @@ deploy: # jobs
     - echo "========== build image =========="
     - docker build -t $group_name/$nginx_name:$app_version -f nginx/Dockerfile .
     - echo "========== create container =========="
-    - docker run --name $nginx_name \
+    - >
+      docker run --name $nginx_name
       -- volume $DOCKER_TLS_CERTDIR:/etc/nginx/certs
-      -p 80:80 \
-      -dit \
+      -p 80:80
+      -dit
       $group_name/$nginx_name:$app_version
