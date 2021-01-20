@@ -19,7 +19,7 @@ module.exports = {
   },
 
   output: {
-    publicPath: process.env.NODE_ENV === 'development' ? 'public' : `http://${process.env.APP_HOST}/public`
+    publicPath: process.env.NODE_ENV === 'development' ? 'public' : `https://${process.env.APP_HOST}/public`
   },
 
   devtool: 'source-map',
