@@ -10,6 +10,8 @@ import dbConfig from '../database/config';
 export default (app: Application) => {
   const config = {} as PowerPartial<EggAppConfig>;
 
+  config.proxy = true;
+
   config.cluster = {
     listen: {
       port: 7001
