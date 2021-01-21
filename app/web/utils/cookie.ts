@@ -8,5 +8,6 @@ export const getCookie = name => {
       return arr[1];
     }
   }
+
   return '';
 };

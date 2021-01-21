@@ -3,3 +3,5 @@ node_modules/
 app/web/**/*.html
 public/
 logs/
+
+app/web/assets/iconfont/*.js

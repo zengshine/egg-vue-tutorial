@@ -1,6 +1,6 @@
 <template>
   <div class="chat-card-wrapper flex-center">
-    <img src=""
+    <img :src="data.url"
          class="logo"
          alt="">
     <div class="profile">
@@ -44,9 +44,9 @@ export default {
 }
 
 .profile {
+  display: flex;
   width: calc(100% - 45px);
   height: 45px;
-  display: flex;
   flex-flow: column;
   justify-content: space-between;
   padding-left: 8px;

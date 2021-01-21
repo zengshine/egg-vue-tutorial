@@ -1,7 +1,19 @@
 import { Application } from 'egg';
 
+import { requireContext } from './utils/common';
+
+const path = require('path');
+
 export default (app: Application) => {
   const { controller, router } = app;
+
+  // 注册各个模块路由
+  const modelDir = path.join(__dirname, './router');
+  const moduleContext = requireContext(modelDir, true, /\.ts$/);
+  Object.values(moduleContext).forEach(module => {
+    const register = module.default;
+    register(app);
+  });
 
   // 初始化passport-github
   // 挂载鉴权路由
@@ -20,5 +32,4 @@ export default (app: Application) => {
   router.get('/', controller.main.index);
   router.get('/client', controller.main.client);
   router.get('/main(/.+)?', controller.main.server);
-  router.resources('user', 'api/v1/user', controller.user);
 };

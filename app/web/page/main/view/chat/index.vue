@@ -39,7 +39,7 @@ export default {
     getChatList() {
       this.chatList = Array(1).fill({
         name: '知云网络',
-        message: '深圳知云网络科技有限公司万科云创'
+        message: '深圳知云网络科技有限公司信息'
       });
     }
   }
@@ -49,7 +49,7 @@ export default {
 
 <style lang="scss">
 .page__wrapper {
-  background: url("~@assets/images/main/bg.jpeg") no-repeat left center / cover;
+  background: url("~@assets/images/main/bg-black.jpg") no-repeat left center / cover;
 }
 
 .chat-box__wrapper {

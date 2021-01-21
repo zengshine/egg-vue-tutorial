@@ -12,14 +12,80 @@ body {
   height: 100%;
 }
 
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* icontfont 图标公用样式 */
+.icon {
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -0.15rem;
 }
 
+/* ---------- start：1px边框兼容方法 ---------- */
+.hairlines-border,
+%hairlines-border {
+  position: absolute;
+  content: '';
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+
+.hairlines-border--all,
+.hairlines-border--top,
+.hairlines-border--bottom {
+  position: relative;
+  z-index: 1;
+}
+
+.hairlines-border--all::after {
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+  transform: scale(0.5);
+
+  @extend %hairlines-border;
+}
+
+.hairlines-border--top::after {
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #dcdcdc;
+
+  @extend %hairlines-border;
+}
+
+.hairlines-border--bottom::after {
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid #dcdcdc;
+
+  @extend %hairlines-border;
+}
+
+/* ---------- end：1px边框兼容方法 ---------- */
+
+/* 单行超出省略*/
 .single-line-ellipsis {
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-flow: column;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

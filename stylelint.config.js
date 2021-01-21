@@ -17,5 +17,10 @@ module.exports = {
     'color-hex-length': 'short',
     // 不能用important
     'declaration-no-important': true,
-  },
+    // 选择组中最多允许一个ID选择器
+    'selector-max-id': 1,
+    // 允许低于1，0开始的小数单位
+    'number-leading-zero': 'always',
+    'string-quotes': 'single'
+  }
 };

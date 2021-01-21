@@ -10,7 +10,7 @@ const {
   DB_HOST,
   DB_PORT,
   DB_USER,
-  DB_PASSWORD,
+  DB_PASSWORD
 } = process.env;
 
 // 递归获取文件夹下所有文件
@@ -37,7 +37,7 @@ const createSequelize = (dbName = '') => {
   const sequelize = new Sequelize(dbName, DB_USER, DB_PASSWORD, {
     dialect: 'mysql',
     host: DB_HOST,
-    port: DB_PORT,
+    port: DB_PORT
   });
 
   return sequelize;

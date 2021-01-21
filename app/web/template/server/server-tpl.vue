@@ -1,4 +1,3 @@
-<!--  -->
 <template>
   <html>
     <head>
@@ -19,6 +18,11 @@
         rel="shortcut icon"
         href="/favicon.ico"
         type="image/x-icon">
+      <!-- icontfont -->
+      <link rel="preload"
+            href="http://at.alicdn.com/t/font_2338836_1bplu1ppnad.js"
+            as="script"
+            onload="var script = document.createElement('script'); script.src = this.href; document.body.appendChild(script);">
     </head>
     <body>
       <div id="app">
@@ -52,7 +56,6 @@ export default {
 
   data() {
     return {
-
     };
   }
 };

@@ -1,3 +1,5 @@
+import globalComponents from '@web/plugins/components';
+
 export default class App {
   config: any;
 
@@ -6,6 +8,9 @@ export default class App {
   }
 
   bootstrap() {
+    const { Vue } = this.config;
+    Vue.use(globalComponents);
+
     if (EASY_ENV_IS_NODE) {
       return this.server();
     }

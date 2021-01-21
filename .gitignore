@@ -13,6 +13,7 @@ run/
 !.autod.conf.js
 npm-debug.log
 debug.log
+*.Identifier
 
 app/view
 public/
