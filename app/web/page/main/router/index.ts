@@ -8,9 +8,9 @@ export default {
       component: () => import('@page/main/view/chat/index.vue'),
       children: [
         {
-          name: 'chat',
-          path: '/chat',
-          component: () => import('@page/main/view/chat/index.vue')
+          name: 'cubism',
+          path: '/cubism',
+          component: () => import('@page/main/view/cubism/index.vue')
         }
       ]
     }
