@@ -4,17 +4,17 @@
 
 import axios from 'axios';
 
-import { getCookie } from '@web/utils/cookie';
+import { getCsrfToken } from '@web/utils/common';
 
 import requestSuccessInterceptor from '@config/axios/interceptors/requestSuccess';
 import requestErrorInterceptor from '@config/axios/interceptors/requestError';
 import responseSuccessInterceptor from '@config/axios/interceptors/responseSuccess';
 import responseErrorInterceptor from '@config/axios/interceptors/responseError';
 
-
-const csrfToken = getCookie('csrfToken');
+const csrfToken = getCsrfToken();
 
 const defaultConfig = {
+  baseURL: '',
   headers: { 'x-csrf-token': csrfToken }
 };
 

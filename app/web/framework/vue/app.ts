@@ -1,4 +1,5 @@
 import globalComponents from '@web/plugins/components';
+import axiosInstance from '@web/plugins/axios';
 
 export default class App {
   config: any;
@@ -67,6 +68,10 @@ export default class App {
       const { Vue } = this.config;
       const vm = this.create(context.state);
       const { store, router } = vm;
+
+      // 初始化axios配置
+      axiosInstance.defaults.headers['x-csrf-token'] = context.state.csrf;
+      axiosInstance.defaults.baseURL = 'http://localhost:7001';
 
       // 设置初始路径
       const { url } = context.state;

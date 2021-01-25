@@ -1,6 +1,7 @@
 <template>
   <section class="column-wrapper">
-    <div class="nav">
+    <div v-if="isNavVisible"
+         class="nav">
       <slot name="nav" />
     </div>
     <div class="content">
@@ -11,8 +12,8 @@
   </section>
 </template>
 
-<script>
-
+<script lang="ts">
+import { mapState } from 'vuex';
 export default {
   name: 'Column',
 
@@ -20,6 +21,10 @@ export default {
     return {
 
     };
+  },
+
+  computed: {
+    ...mapState([ 'isNavVisible' ])
   }
 };
 </script>

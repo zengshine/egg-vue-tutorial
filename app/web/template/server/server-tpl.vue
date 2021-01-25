@@ -18,9 +18,9 @@
         rel="shortcut icon"
         href="/favicon.ico"
         type="image/x-icon">
-      <!-- icontfont -->
+      <!-- iconfont link -->
       <link rel="preload"
-            href="http://at.alicdn.com/t/font_2338836_1bplu1ppnad.js"
+            href="http://at.alicdn.com/t/font_2338836_wz0zl0hrl3k.js"
             as="script"
             onload="var script = document.createElement('script'); script.src = this.href; document.body.appendChild(script);">
     </head>

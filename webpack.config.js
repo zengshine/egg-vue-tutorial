@@ -57,7 +57,8 @@ module.exports = {
           priority: 50
         }
       }
-    }
+    },
+    sideEffects: false
   },
 
   resolve: {

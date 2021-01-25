@@ -1,7 +1,8 @@
 <template>
   <Layout v-bind="meta">
     <main class="main-wrapper h-p-100">
-      <nav class="main-nav">
+      <nav v-if="isNavVisible"
+           class="main-nav">
         <navigation />
       </nav>
       <nav class="main-content">
@@ -13,6 +14,8 @@
 
 <script lang="ts">
 import Navigation from '@page/main/view/navigation/index.vue';
+
+import { mapState } from 'vuex';
 export default {
   name: 'App',
 
@@ -26,6 +29,45 @@ export default {
         title: '企知道'
       }
     };
+  },
+
+  computed: {
+    ...mapState({
+      isNavVisible: (state:any) => state.isNavVisible
+    })
+  },
+
+  mounted() {
+    this.initDomListener();
+  },
+
+  beforeDestroy() {
+    this.removeDomListener();
+  },
+
+  methods: {
+    initDomListener() {
+      this.removeDomListener();
+      document.addEventListener('keydown', this.handleKeyDown);
+    },
+
+    removeDomListener() {
+      document.removeEventListener('keydown', this.handleKeyDown);
+    },
+
+    handleKeyDown(evt) {
+      console.log('handleKeyDown', evt);
+      const { keyCode } = evt;
+      // Escape
+      if (keyCode === 27) {
+        this.toggleNav();
+      }
+    },
+
+    toggleNav() {
+      const { isNavVisible } = this;
+      this.$store.commit('SET_NAV_VISIBILITY', !isNavVisible);
+    }
   }
 };
 </script>
@@ -41,6 +83,6 @@ export default {
 }
 
 .main-content {
-  width: calc( 100% - 100px );
+  flex: 1 1 auto;
 }
 </style>

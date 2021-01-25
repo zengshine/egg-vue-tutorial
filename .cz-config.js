@@ -40,7 +40,13 @@ module.exports = {
   scopes: [
     {
       name: 'lint'
-    }
+    },
+    {
+      name: 'main'
+    },
+    {
+      name: 'main'
+    },
   ],
 
   // allowTicketNumber: false,
