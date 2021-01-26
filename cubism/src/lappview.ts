@@ -121,23 +121,23 @@ export class LAppView {
     let imageName = '';
 
     // 背景画像初期化
-    imageName = LAppDefine.BackImageName;
+    // imageName = LAppDefine.BackImageName;
 
-    // 非同期なのでコールバック関数を作成
-    const initBackGroundTexture = (textureInfo: TextureInfo): void => {
-      const x: number = width * 0.5;
-      const y: number = height * 0.5;
+    // // 非同期なのでコールバック関数を作成
+    // const initBackGroundTexture = (textureInfo: TextureInfo): void => {
+    //   const x: number = width * 0.5;
+    //   const y: number = height * 0.5;
 
-      const fwidth = textureInfo.width * 2.0;
-      const fheight = height * 0.95;
-      this._back = new LAppSprite(x, y, fwidth, fheight, textureInfo.id);
-    };
+    //   const fwidth = textureInfo.width * 2.0;
+    //   const fheight = height * 0.95;
+    //   this._back = new LAppSprite(x, y, fwidth, fheight, textureInfo.id);
+    // };
 
-    textureManager.createTextureFromPngFile(
-      resourcesPath + imageName,
-      false,
-      initBackGroundTexture
-    );
+    // textureManager.createTextureFromPngFile(
+    //   resourcesPath + imageName,
+    //   false,
+    //   initBackGroundTexture
+    // );
 
     // 歯車画像初期化
     imageName = LAppDefine.GearImageName;

@@ -44,6 +44,6 @@
     "app/view/*",
     "node_modules/*",
     "database/*",
-    "cubism"
+    "cubism/"
   ]
 }
