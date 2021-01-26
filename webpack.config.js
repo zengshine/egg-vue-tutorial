@@ -27,7 +27,7 @@ module.exports = {
   dll: [ 'vue', 'vuex', 'axios' ],
 
   performance: {
-    hints: process.env.NODE_ENV === 'development' ? 'warning' : 'error',
+    hints: process.env.NODE_ENV === 'development' ? 'warning' : 'warning',
     maxEntrypointSize: 1024 * 178,
     maxAssetSize: 1024 * 200,
     assetFilter(assetFilename) {
@@ -66,6 +66,7 @@ module.exports = {
     mainFields: [ 'browser', 'module', 'main' ],
     extensions: [ '.ts', '.js', '.vue' ],
     alias: {
+      '@': resolve('.'),
       '@app': resolve('app'),
       '@web': resolve('app/web'),
       '@assets': resolve('app/web/assets'),
@@ -75,7 +76,8 @@ module.exports = {
       '@asset': resolve('app/web/asset'),
       '@framework': resolve('app/web/framework'),
       '@component': resolve('app/web/component'),
-      '@store': resolve('app/web/page/store')
+      '@store': resolve('app/web/page/store'),
+      '@cubismFramework': resolve('cubism/Framework/src')
     }
   },
 
@@ -108,7 +110,19 @@ module.exports = {
     // 将css提取成独立文件
     new MiniCssExtractPlugin({
       filename: 'style-[name]-[contentHash].css'
-    })
+    }),
+    {
+      copy: [
+        {
+          from: 'app/web/assets',
+          to: 'assets'
+        },
+        {
+          from: 'cubism/Resources',
+          to: 'assets/cubism/Resources'
+        }
+      ]
+    }
   ]
 };
 

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": false,
+    "target": "es5",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": "./",
+    "paths": {
+      "@cubismFramework/*": ["Framework/src/*"]
+    }
+  }
+}

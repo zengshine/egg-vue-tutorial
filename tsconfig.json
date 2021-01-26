@@ -25,20 +25,17 @@
     "skipDefaultLibCheck": true,
     "inlineSourceMap": true,
     "importHelpers": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     
     // 匹配webpack alias
     "paths": {
+      "@/": ["*"],
       "@app/*": ["app/*"],
       "@framework/*": ["app/web/framework/*"],
       "@view/*": ["app/web/page/*"],
       "@page/*": ["app/web/page/*"],
       "@web/*": ["app/web/*"],
       "@config/*": ["app/web/config/*"],
-      "@asset/*": ["asset/*"],
-      "@component/*": ["component/*"],
-      "@store/*": ["page/store/*"],
-      "@router/*": ["page/router/*"],
     }
   },
   "exclude": [
@@ -46,6 +43,7 @@
     "app/public/*",
     "app/view/*",
     "node_modules/*",
-    "database/*"
+    "database/*",
+    "cubism"
   ]
 }
