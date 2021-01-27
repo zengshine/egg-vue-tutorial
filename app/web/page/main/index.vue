@@ -56,7 +56,6 @@ export default {
     },
 
     handleKeyDown(evt) {
-      console.log('handleKeyDown', evt);
       const { keyCode } = evt;
       // Escape
       if (keyCode === 27) {

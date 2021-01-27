@@ -12,10 +12,6 @@ import storeOptions from './store';
 import Layout from '@web/template/server/index.vue';
 import App from '@view/main/index.vue';
 
-import '@web/style/atom.scss';
-import '@web/style/common.scss';
-import '@web/style/reset.scss';
-
 Vue.use(Vuex);
 
 Vue.use(VueRouter);

@@ -62,5 +62,5 @@ export const DebugTouchLogEnable = false;
 export const CubismLoggingLevel: LogLevel = LogLevel.LogLevel_Verbose;
 
 // デフォルトのレンダーターゲットサイズ
-export const RenderTargetWidth = 475;
-export const RenderTargetHeight = 250;
+export const RenderTargetWidth = 375;
+export const RenderTargetHeight = 375;

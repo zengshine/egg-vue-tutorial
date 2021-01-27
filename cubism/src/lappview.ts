@@ -78,10 +78,10 @@ export class LAppView {
     this._touchManager = null;
     this._deviceToScreen = null;
 
-    this._gear.release();
+    this._gear && this._gear.release();
     this._gear = null;
 
-    this._back.release();
+    this._back && this._back.release();
     this._back = null;
 
     gl.deleteProgram(this._programId);
@@ -244,6 +244,7 @@ export class LAppView {
    * @param deviceX デバイスX座標
    */
   public transformScreenX(deviceX: number): number {
+    console.log('transformScreenX ===========>', deviceX)
     return this._deviceToScreen.transformX(deviceX);
   }
 

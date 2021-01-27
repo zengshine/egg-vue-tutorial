@@ -1,31 +1,36 @@
 {
-  "common.js": "http://8.135.3.155:80/public/common.bundle.9957c1152d0543b65ec3.js",
-  "login.js": "http://8.135.3.155:80/public/js/chunk/login.c792086a.js",
-  "main/index.js": "http://8.135.3.155:80/public/js/chunk/main/index.6a75ebfc.js",
-  "runtime.js": "http://8.135.3.155:80/public/js/runtime.701413cb.js",
-  "vendor.js": "http://8.135.3.155:80/public/js/vendor.2fa9e021.js",
+  "common.js": "/public/common.bundle.85a033e8d55743f24935.js",
+  "common.js.map": "/public/common.bundle.85a033e8d55743f24935.js.map",
+  "login.js": "/public/js/chunk/login.js",
+  "login.js.map": "/public/js/chunk/login.js.map",
+  "main/index.js": "/public/js/chunk/main/index.js",
+  "main/index.js.map": "/public/js/chunk/main/index.js.map",
+  "runtime.js": "/public/js/runtime.js",
+  "runtime.js.map": "/public/js/runtime.js.map",
+  "vendor.js": "/public/js/vendor.js",
+  "vendor.js.map": "/public/js/vendor.js.map",
   "deps": {
     "main/index.js": {
       "js": [
-        "http://8.135.3.155:80/public/js/vendor.2fa9e021.js",
-        "http://8.135.3.155:80/public/js/runtime.701413cb.js",
-        "http://8.135.3.155:80/public/common.bundle.9957c1152d0543b65ec3.js",
-        "http://8.135.3.155:80/public/js/chunk/main/index.6a75ebfc.js"
+        "/public/js/vendor.js",
+        "/public/js/runtime.js",
+        "/public/common.bundle.85a033e8d55743f24935.js",
+        "/public/js/chunk/main/index.js"
       ],
       "css": []
     },
     "login.js": {
       "js": [
-        "http://8.135.3.155:80/public/js/vendor.2fa9e021.js",
-        "http://8.135.3.155:80/public/js/runtime.701413cb.js",
-        "http://8.135.3.155:80/public/common.bundle.9957c1152d0543b65ec3.js",
-        "http://8.135.3.155:80/public/js/chunk/login.c792086a.js"
+        "/public/js/vendor.js",
+        "/public/js/runtime.js",
+        "/public/common.bundle.85a033e8d55743f24935.js",
+        "/public/js/chunk/login.js"
       ],
       "css": []
     }
   },
   "info": {
-    "publicPath": "http://8.135.3.155:80/public/",
+    "publicPath": "/public/",
     "buildPath": "public",
     "mapped": true
   }

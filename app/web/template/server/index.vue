@@ -40,3 +40,4 @@ export default {
 
 <style lang="scss" src="@web/style/atom.scss"></style>
 <style lang="scss" src="@web/style/common.scss"></style>
+<style lang="scss" src="@web/style/reset.scss"></style>

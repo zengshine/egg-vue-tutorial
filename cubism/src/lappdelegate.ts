@@ -53,11 +53,12 @@ export class LAppDelegate {
   /**
    * APPに必要な物を初期化する。
    */
-  public initialize({ selector }): boolean {
+  public initialize(options): boolean {
+    const { selector, width, height } = options
     // キャンバスの作成
     canvas = document.createElement('canvas');
-    canvas.width = LAppDefine.RenderTargetWidth;
-    canvas.height = LAppDefine.RenderTargetHeight;
+    canvas.width = width || LAppDefine.RenderTargetWidth;
+    canvas.height = height || LAppDefine.RenderTargetHeight;
 
     // glコンテキストを初期化
     // @ts-ignore
