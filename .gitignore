@@ -24,6 +24,7 @@ lib/**/*.js
 app/**/*.map
 test/**/*.map
 config/**/*.map
+config/manifest.json
 
 app.js
 agent.js

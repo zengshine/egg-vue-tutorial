@@ -28,8 +28,8 @@ module.exports = {
 
   performance: {
     hints: process.env.NODE_ENV === 'development' ? 'warning' : 'warning',
-    maxEntrypointSize: 1024 * 178,
-    maxAssetSize: 1024 * 200,
+    maxEntrypointSize: 1024 * 178 * 3,
+    maxAssetSize: 1024 * 500,
     assetFilter(assetFilename) {
       // 计算资源匹配规则
       return assetFilename.endsWith('.js');
