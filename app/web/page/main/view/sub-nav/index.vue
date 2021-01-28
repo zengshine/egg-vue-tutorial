@@ -2,7 +2,7 @@
   <column class="h-p-100">
     <template #nav>
       <div class="chat-box__wrapper page__wrapper h-p-100">
-        <chat-card v-for="(item, index) of chatList"
+        <chat-card v-for="(item, index) of dataList"
                    :key="index"
                    :data="item" />
       </div>
@@ -12,7 +12,7 @@
 
 <script>
 import Column from '@view/main/components/layout/columns';
-import ChatCard from '@view/main/view/chat/components/chat-card/index.vue';
+import ChatCard from '@view/main/view/sub-nav/components/chat-card/index.vue';
 export default {
   name: 'Chat',
 
@@ -23,7 +23,7 @@ export default {
 
   data() {
     return {
-      chatList: []
+      dataList: []
     };
   },
 
@@ -33,13 +33,13 @@ export default {
 
   methods: {
     initComponent() {
-      this.getChatList();
+      this.getDataList();
     },
 
-    getChatList() {
-      this.chatList = Array(1).fill({
-        name: 'no-unknow',
-        message: 'www.no-unknow.fun'
+    getDataList() {
+      this.dataList = Array(1).fill({
+        name: 'cubism',
+        message: 'no-unknow.fun'
       });
     }
   }

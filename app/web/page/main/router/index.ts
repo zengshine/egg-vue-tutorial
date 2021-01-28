@@ -5,7 +5,7 @@ export default {
     {
       name: 'main',
       path: '',
-      component: () => import('@page/main/view/chat/index.vue'),
+      component: () => import('@page/main/view/sub-nav/index.vue'),
       children: [
         {
           name: 'cubism',

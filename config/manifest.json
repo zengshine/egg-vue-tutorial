@@ -1,34 +1,40 @@
 {
-  "common.js": "http://8.135.3.155:80/public/common.bundle.5a326f5f23db704f40d2.js",
-  "cubism.js": "http://8.135.3.155:80/public/cubism.bundle.39cbde13b4a92e7aa3bd.js",
-  "login.js": "http://8.135.3.155:80/public/js/chunk/login.9c786a8b.js",
-  "main/index.js": "http://8.135.3.155:80/public/js/chunk/main/index.45eec384.js",
-  "runtime.js": "http://8.135.3.155:80/public/js/runtime.701413cb.js",
-  "vendor.js": "http://8.135.3.155:80/public/js/vendor.2fa9e021.js",
+  "common.js": "/public/common.bundle.e49478bfd3764c1a8499.js",
+  "common.js.map": "/public/common.bundle.e49478bfd3764c1a8499.js.map",
+  "cubism.js": "/public/cubism.bundle.8f9a3dec3d8d7b0d7435.js",
+  "cubism.js.map": "/public/cubism.bundle.8f9a3dec3d8d7b0d7435.js.map",
+  "login.js": "/public/js/chunk/login.js",
+  "login.js.map": "/public/js/chunk/login.js.map",
+  "main/index.js": "/public/js/chunk/main/index.js",
+  "main/index.js.map": "/public/js/chunk/main/index.js.map",
+  "runtime.js": "/public/js/runtime.js",
+  "runtime.js.map": "/public/js/runtime.js.map",
+  "vendor.js": "/public/js/vendor.js",
+  "vendor.js.map": "/public/js/vendor.js.map",
   "deps": {
     "main/index.js": {
       "js": [
-        "http://8.135.3.155:80/public/js/vendor.2fa9e021.js",
-        "http://8.135.3.155:80/public/js/runtime.701413cb.js",
-        "http://8.135.3.155:80/public/common.bundle.5a326f5f23db704f40d2.js",
-        "http://8.135.3.155:80/public/cubism.bundle.39cbde13b4a92e7aa3bd.js",
-        "http://8.135.3.155:80/public/js/chunk/main/index.45eec384.js"
+        "/public/js/vendor.js",
+        "/public/js/runtime.js",
+        "/public/common.bundle.e49478bfd3764c1a8499.js",
+        "/public/cubism.bundle.8f9a3dec3d8d7b0d7435.js",
+        "/public/js/chunk/main/index.js"
       ],
       "css": []
     },
     "login.js": {
       "js": [
-        "http://8.135.3.155:80/public/js/vendor.2fa9e021.js",
-        "http://8.135.3.155:80/public/js/runtime.701413cb.js",
-        "http://8.135.3.155:80/public/common.bundle.5a326f5f23db704f40d2.js",
-        "http://8.135.3.155:80/public/cubism.bundle.39cbde13b4a92e7aa3bd.js",
-        "http://8.135.3.155:80/public/js/chunk/login.9c786a8b.js"
+        "/public/js/vendor.js",
+        "/public/js/runtime.js",
+        "/public/common.bundle.e49478bfd3764c1a8499.js",
+        "/public/cubism.bundle.8f9a3dec3d8d7b0d7435.js",
+        "/public/js/chunk/login.js"
       ],
       "css": []
     }
   },
   "info": {
-    "publicPath": "http://8.135.3.155:80/public/",
+    "publicPath": "/public/",
     "buildPath": "public",
     "mapped": true
   }
