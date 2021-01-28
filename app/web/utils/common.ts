@@ -10,7 +10,6 @@ import $store from '@web/page/main/store';
  */
 export const getCsrfToken = () => {
   if (EASY_ENV_IS_NODE) {
-    console.log('getCsrfToken $store=========================>', $store);
     return $store.state.csrfToken;
   }
 

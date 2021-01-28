@@ -12,6 +12,7 @@ export default (app: Application) => {
   const moduleContext = requireContext(modelDir, true, /\.ts$/);
   Object.values(moduleContext).forEach(module => {
     const register = module.default;
+    console.log('module ========>', register, module);
     register(app);
   });
 

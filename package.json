@@ -13,6 +13,7 @@
     "stop": "egg-scripts stop --title=egg-server-tutorial",
     "dev": "egg-bin dev -r egg-ts-helper/register",
     "build": "ets && tsc -p tsconfig.json && easy build prod",
+    "build:size": "ets && tsc -p tsconfig.json && easy build prod --size --speed",
     "debug": "egg-bin debug",
     "test-local": "egg-bin test",
     "test": "npm run lint -- --fix && npm run test-local",

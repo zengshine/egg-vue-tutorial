@@ -45,7 +45,15 @@ module.exports = {
           chunks: 'all',
           minSize: 1,
           minChunks: 1,
-          filename: '[name].bundle.[hash].js'
+          filename: '[name].bundle.[contentHash].js'
+        },
+        cubism: {
+          name: 'cubism',
+          test: /[\\/]cubism[\\/]/,
+          chunks: 'all',
+          minSize: 1,
+          minChunks: 1,
+          filename: '[name].bundle.[contentHash].js'
         },
         styles:
         {

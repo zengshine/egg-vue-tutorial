@@ -1,10 +1,13 @@
 /**
  * @file 状态管理
  */
+const state: mainState = {
+  isNavVisible: true,
+  csrfToken: ''
+};
+
 export default {
-  state: {
-    isNavVisible: true
-  },
+  state,
 
   mutations: {
     SET_INIT_STATE(state, payload) {
