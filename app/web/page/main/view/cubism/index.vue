@@ -31,7 +31,7 @@ export default {
       const cubismInstance = LAppDelegate.getInstance();
       const options = {
         selector: '.js-cubism__wrapper',
-        width: 350,
+        width: 400,
         height: 350
       };
 

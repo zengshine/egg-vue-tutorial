@@ -45,7 +45,7 @@ module.exports = {
       name: 'main'
     },
     {
-      name: 'main'
+      name: 'cubism'
     },
   ],
 

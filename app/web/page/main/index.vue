@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       meta: {
-        title: '企知道'
+        title: 'NO-UNKNOW'
       }
     };
   },

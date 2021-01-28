@@ -79,6 +79,7 @@ enum LoadStep {
  * モデル生成、機能コンポーネント生成、更新処理とレンダリングの呼び出しを行う。
  */
 export class LAppModel extends CubismUserModel {
+
   /**
    * model3.jsonが置かれたディレクトリとファイルパスからモデルを生成する
    * @param dir
@@ -456,7 +457,7 @@ export class LAppModel extends CubismUserModel {
     // モーションによるパラメータ更新の有無
     let motionUpdated = false;
 
-    //--------------------------------------------------------------------------
+    // --------------------------------------------------------------------------
     this._model.loadParameters(); // 前回セーブされた状態をロード
     if (this._motionManager.isFinished()) {
       // モーションの再生がない場合、待機モーションの中からランダムで再生する
@@ -471,7 +472,7 @@ export class LAppModel extends CubismUserModel {
       ); // モーションを更新
     }
     this._model.saveParameters(); // 状態を保存
-    //--------------------------------------------------------------------------
+    // --------------------------------------------------------------------------
 
     // まばたき
     if (!motionUpdated) {
@@ -695,11 +696,30 @@ export class LAppModel extends CubismUserModel {
     for (let i = 0; i < count; i++) {
       if (this._modelSetting.getHitAreaName(i) == hitArenaName) {
         const drawId: CubismIdHandle = this._modelSetting.getHitAreaId(i);
-        return this.isHit(drawId, x, y);
+        // const drawId: CubismIdHandle = CubismFramework.getIdManager().getId(hitArenaName);
+        const isHit = this.isHit(drawId, x, y);
+        console.log('hitTest', drawId, count, hitArenaName, isHit);
+        return isHit;
       }
     }
 
     return false;
+  }
+
+  /**
+   * hitarea test
+   * @param hitAreaName hitArea name
+  */
+  public hasHitArea(hitAreaName: string): boolean {
+    const count: number = this._modelSetting.getHitAreasCount();
+
+    for (let i = 0; i < count; i++) {
+      if (this._modelSetting.getHitAreaName(i) === hitAreaName) {
+        return true;
+      }
+
+      return false;
+    }
   }
 
   /**
@@ -785,7 +805,7 @@ export class LAppModel extends CubismUserModel {
     if (this._model == null) return;
 
     // キャンバスサイズを渡す
-    const viewport: number[] = [0, 0, canvas.width, canvas.height];
+    const viewport: number[] = [ 0, 0, canvas.width, canvas.height ];
 
     this.getRenderer().setRenderState(frameBuffer, viewport);
     this.getRenderer().drawModel();

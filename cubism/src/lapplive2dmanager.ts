@@ -24,6 +24,7 @@ export let s_instance: LAppLive2DManager = null;
  * モデル生成と破棄、タップイベントの処理、モデル切り替えを行う。
  */
 export class LAppLive2DManager {
+
   /**
    * クラスのインスタンス（シングルトン）を返す。
    * インスタンスが生成されていない場合は内部でインスタンスを生成する。
@@ -111,21 +112,25 @@ export class LAppLive2DManager {
             `[APP]hit area: [${LAppDefine.HitAreaNameHead}]`
           );
         }
+
         this._models.at(i).setRandomExpression();
-      } else if (this._models.at(i).hitTest(LAppDefine.HitAreaNameBody, x, y)) {
+      }
+
+      if (this._models.at(i).hitTest(LAppDefine.HitAreaNameBody, x, y)) {
         if (LAppDefine.DebugLogEnable) {
           LAppPal.printMessage(
             `[APP]hit area: [${LAppDefine.HitAreaNameBody}]`
           );
         }
-        this._models
-          .at(i)
-          .startRandomMotion(
-            LAppDefine.MotionGroupTapBody,
-            LAppDefine.PriorityNormal,
-            this._finishedMotion
-          );
       }
+
+      this._models
+        .at(i)
+        .startRandomMotion(
+          LAppDefine.MotionGroupTapBody,
+          LAppDefine.PriorityNormal,
+          this._finishedMotion
+        );
     }
   }
 
@@ -137,8 +142,10 @@ export class LAppLive2DManager {
     let projection: Csm_CubismMatrix44 = new Csm_CubismMatrix44();
 
     const { width, height } = canvas;
+
+    // config model scale: scale(x, y), x: 横轴缩放倍数，y: 纵轴缩放倍数
     // projection.scale(1.0, width / height);
-    projection.scale(2.0, 2.0);
+    projection.scale(2.0, 2.0 * width / height);
 
     if (this._viewMatrix != null) {
       projection.multiplyByMatrix(this._viewMatrix);
@@ -184,7 +191,8 @@ export class LAppLive2DManager {
     modelJsonName += '.model3.json';
 
     this.releaseAllModel();
-    this._models.pushBack(new LAppModel());
+    const modelInstance = new LAppModel();
+    this._models.pushBack(modelInstance);
     this._models.at(0).loadAssets(modelPath, modelJsonName);
   }
 

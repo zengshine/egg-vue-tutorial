@@ -1,6 +1,6 @@
 {
-  "common.js": "/public/common.bundle.85a033e8d55743f24935.js",
-  "common.js.map": "/public/common.bundle.85a033e8d55743f24935.js.map",
+  "common.js": "/public/common.bundle.ce65ffb6637f39ed1956.js",
+  "common.js.map": "/public/common.bundle.ce65ffb6637f39ed1956.js.map",
   "login.js": "/public/js/chunk/login.js",
   "login.js.map": "/public/js/chunk/login.js.map",
   "main/index.js": "/public/js/chunk/main/index.js",
@@ -14,7 +14,7 @@
       "js": [
         "/public/js/vendor.js",
         "/public/js/runtime.js",
-        "/public/common.bundle.85a033e8d55743f24935.js",
+        "/public/common.bundle.ce65ffb6637f39ed1956.js",
         "/public/js/chunk/main/index.js"
       ],
       "css": []
@@ -23,7 +23,7 @@
       "js": [
         "/public/js/vendor.js",
         "/public/js/runtime.js",
-        "/public/common.bundle.85a033e8d55743f24935.js",
+        "/public/common.bundle.ce65ffb6637f39ed1956.js",
         "/public/js/chunk/login.js"
       ],
       "css": []

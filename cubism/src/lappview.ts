@@ -21,6 +21,7 @@ import * as LAppDefine from './lappdefine';
  * 描画クラス。
  */
 export class LAppView {
+
   /**
    * コンストラクタ
    */
@@ -244,7 +245,7 @@ export class LAppView {
    * @param deviceX デバイスX座標
    */
   public transformScreenX(deviceX: number): number {
-    console.log('transformScreenX ===========>', deviceX)
+    console.log('transformScreenX ===========>', deviceX);
     return this._deviceToScreen.transformX(deviceX);
   }
 

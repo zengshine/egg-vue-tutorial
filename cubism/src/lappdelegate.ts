@@ -25,6 +25,7 @@ export let frameBuffer: WebGLFramebuffer = null;
  * Cubism SDKの管理を行う。
  */
 export class LAppDelegate {
+
   /**
    * クラスのインスタンス（シングルトン）を返す。
    * インスタンスが生成されていない場合は内部でインスタンスを生成する。
@@ -54,7 +55,7 @@ export class LAppDelegate {
    * APPに必要な物を初期化する。
    */
   public initialize(options): boolean {
-    const { selector, width, height } = options
+    const { selector, width, height } = options;
     // キャンバスの作成
     canvas = document.createElement('canvas');
     canvas.width = width || LAppDefine.RenderTargetWidth;
@@ -72,11 +73,11 @@ export class LAppDelegate {
       return false;
     }
 
-    const container = document.querySelector(selector)
+    const container = document.querySelector(selector);
 
-    if(!container) {
-      console.error('cannot find the element by selector:', selector)
-      return false
+    if (!container) {
+      console.error('cannot find the element by selector:', selector);
+      return false;
     }
 
     // キャンバスを DOM に追加
@@ -308,9 +309,10 @@ function onClickBegan(e: MouseEvent): void {
  * マウスポインタが動いたら呼ばれる。
  */
 function onMouseMoved(e: MouseEvent): void {
-  if (!LAppDelegate.getInstance()._captured) {
-    return;
-  }
+  // 判断是否处于选中状态（按住鼠标未释放）
+  // if (!LAppDelegate.getInstance()._captured) {
+  //   return;
+  // }
 
   if (!LAppDelegate.getInstance()._view) {
     LAppPal.printMessage('view notfound');
