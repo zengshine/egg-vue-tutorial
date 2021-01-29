@@ -17,7 +17,10 @@ debug.log
 
 app/view
 public/
+
 app/**/*.js
+!app/web/**/*.js
+
 test/**/*.js
 config/**/*.js
 lib/**/*.js
