@@ -4,11 +4,11 @@ import Vuex from 'vuex';
 import VueRouter from 'vue-router';
 import { sync } from 'vuex-router-sync';
 
-import SSRBuilder from '@framework/vue/app';
+import SSRBuilder from '@web/framework/vue/app';
 
 import Layout from '@web/template/server/index.vue';
 
-import App from '@page/login/index.vue';
+import App from '@web/page/login/index.vue';
 
 import storeOptions from './store';
 

@@ -6,10 +6,10 @@ import axios from 'axios';
 
 import { getCsrfToken } from '@web/utils/common';
 
-import requestSuccessInterceptor from '@config/axios/interceptors/requestSuccess';
-import requestErrorInterceptor from '@config/axios/interceptors/requestError';
-import responseSuccessInterceptor from '@config/axios/interceptors/responseSuccess';
-import responseErrorInterceptor from '@config/axios/interceptors/responseError';
+import requestSuccessInterceptor from '@web/config/axios/interceptors/requestSuccess';
+import requestErrorInterceptor from '@web/config/axios/interceptors/requestError';
+import responseSuccessInterceptor from '@web/config/axios/interceptors/responseSuccess';
+import responseErrorInterceptor from '@web/config/axios/interceptors/responseError';
 
 const csrfToken = getCsrfToken();
 

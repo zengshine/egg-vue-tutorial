@@ -1,6 +1,6 @@
 import axios from '@web/plugins/axios';
 
-import { API_BASIC_URL } from '@config/url';
+import { API_BASIC_URL } from '@web/config/url';
 import { DEFAULT_CONFIG, QUERYPARAMS_METHODS } from './config';
 import { isMethodValid, replaceRestPrams } from './util';
 

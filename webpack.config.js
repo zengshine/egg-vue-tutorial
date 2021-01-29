@@ -39,9 +39,9 @@ module.exports = {
     splitChunks: {
       cacheGroups: {
         commons: {
-          name: 'common',
+          name: 'commons',
           test: /[\\/]node_modules[\\/]/,
-          chunks: 'all',
+          chunks: 'initial',
           minSize: 1,
           minChunks: 1,
           filename: '[name].bundle.[contentHash].js'
@@ -49,7 +49,7 @@ module.exports = {
         cubism: {
           name: 'cubism',
           test: /[\\/]cubism[\\/]/,
-          chunks: 'all',
+          chunks: 'initial',
           minSize: 1,
           minChunks: 1,
           filename: '[name].bundle.[contentHash].js'
@@ -76,14 +76,6 @@ module.exports = {
       '@': resolve('.'),
       '@app': resolve('app'),
       '@web': resolve('app/web'),
-      '@assets': resolve('app/web/assets'),
-      '@view': resolve('app/web/page'),
-      '@page': resolve('app/web/page'),
-      '@config': resolve('app/web/config'),
-      '@asset': resolve('app/web/asset'),
-      '@framework': resolve('app/web/framework'),
-      '@component': resolve('app/web/component'),
-      '@store': resolve('app/web/page/store'),
       '@cubismFramework': resolve('cubism/Framework/src')
     }
   },

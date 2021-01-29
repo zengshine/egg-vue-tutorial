@@ -39,12 +39,6 @@
     }
   },
 
-  // "include": [
-  //   "index.ts",
-  //   "app/**/*.ts",
-  //   "config/**/*.ts"
-  // ],
-
   "exclude": [
     "app/web/*",
     "app/public/*",

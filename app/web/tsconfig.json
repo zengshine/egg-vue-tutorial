@@ -21,11 +21,7 @@
     
     // 匹配webpack alias
     "paths": {
-      "@framework/*": ["./framework/*"],
-      "@view/*": ["./page/*"],
-      "@page/*": ["./page/*"],
       "@web/*": ["./*"],
-      "@config/*": ["./config/*"],
     }
   },
   "include": [

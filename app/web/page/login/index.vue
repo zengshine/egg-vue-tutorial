@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import $api from '@page/login/service/login';
+import $api from '@web/page/login/service/login';
 export default {
   name: 'App',
 

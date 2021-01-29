@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import $api from '@page/main/service/menu';
+import $api from '@web/page/main/service/menu';
 
 export default {
   name: 'Navigation',

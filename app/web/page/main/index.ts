@@ -4,13 +4,13 @@ import Vuex from 'vuex';
 import VueRouter, { RouterOptions } from 'vue-router';
 import { sync } from 'vuex-router-sync';
 
-import SSRBuilder from '@framework/vue/app';
+import SSRBuilder from '@web/framework/vue/app';
 
 import routerOptions from './router';
 import storeOptions from './store';
 
 import Layout from '@web/template/server/index.vue';
-import App from '@view/main/index.vue';
+import App from '@web/page/main/index.vue';
 
 Vue.use(Vuex);
 

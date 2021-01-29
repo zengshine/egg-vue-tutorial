@@ -2,7 +2,7 @@
  * @file api模块对象工厂
  */
 
-import apiFactory from '@config/service/factory';
+import apiFactory from '@web/config/service/factory';
 
 /**
  * 模块api对象生成函数

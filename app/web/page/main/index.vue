@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import Navigation from '@page/main/view/navigation/index.vue';
+import Navigation from '@web/page/main/view/navigation/index.vue';
 
 import { mapState } from 'vuex';
 export default {

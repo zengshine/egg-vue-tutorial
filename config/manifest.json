@@ -1,8 +1,12 @@
 {
-  "common.js": "/public/common.bundle.e49478bfd3764c1a8499.js",
-  "common.js.map": "/public/common.bundle.e49478bfd3764c1a8499.js.map",
-  "cubism.js": "/public/cubism.bundle.c370af761015dd012a30.js",
-  "cubism.js.map": "/public/cubism.bundle.c370af761015dd012a30.js.map",
+  "chunk/0.js": "/public/js/chunk/0.js",
+  "chunk/0.js.map": "/public/js/chunk/0.js.map",
+  "chunk/1.js": "/public/js/chunk/1.js",
+  "chunk/1.js.map": "/public/js/chunk/1.js.map",
+  "common.js": "/public/js/chunk/common.js",
+  "common.js.map": "/public/js/chunk/common.js.map",
+  "commons.js": "/public/commons.bundle.0bc873299215efe00f5c.js",
+  "commons.js.map": "/public/commons.bundle.0bc873299215efe00f5c.js.map",
   "login.js": "/public/js/chunk/login.js",
   "login.js.map": "/public/js/chunk/login.js.map",
   "main/index.js": "/public/js/chunk/main/index.js",
@@ -16,8 +20,8 @@
       "js": [
         "/public/js/vendor.js",
         "/public/js/runtime.js",
-        "/public/common.bundle.e49478bfd3764c1a8499.js",
-        "/public/cubism.bundle.c370af761015dd012a30.js",
+        "/public/js/chunk/common.js",
+        "/public/commons.bundle.0bc873299215efe00f5c.js",
         "/public/js/chunk/main/index.js"
       ],
       "css": []
@@ -26,8 +30,8 @@
       "js": [
         "/public/js/vendor.js",
         "/public/js/runtime.js",
-        "/public/common.bundle.e49478bfd3764c1a8499.js",
-        "/public/cubism.bundle.c370af761015dd012a30.js",
+        "/public/js/chunk/common.js",
+        "/public/commons.bundle.0bc873299215efe00f5c.js",
         "/public/js/chunk/login.js"
       ],
       "css": []

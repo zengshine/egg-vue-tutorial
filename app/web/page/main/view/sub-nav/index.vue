@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import Column from '@view/main/components/layout/columns';
-import ChatCard from '@view/main/view/sub-nav/components/chat-card/index.vue';
+import Column from '@web/page/main/components/layout/columns';
+import ChatCard from '@web/page/main/view/sub-nav/components/chat-card/index.vue';
 export default {
   name: 'Chat',
 

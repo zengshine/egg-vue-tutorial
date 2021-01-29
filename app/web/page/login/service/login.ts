@@ -6,7 +6,7 @@ interface service {
   login: any
 }
 
-import moduleFactory from '@config/service/moduleFactory';
+import moduleFactory from '@web/config/service/moduleFactory';
 
 const apiConfig = {
 
