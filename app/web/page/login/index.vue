@@ -19,7 +19,6 @@
 </template>
 
 <script lang="ts">
-// import Navigation from '@view/main/view/navigation/index.vue';
 import $api from '@page/login/service/login';
 export default {
   name: 'App',

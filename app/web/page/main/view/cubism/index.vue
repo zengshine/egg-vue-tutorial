@@ -7,7 +7,7 @@
 <script lang="ts">
 import { LAppDelegate } from '@/cubism/src/lappdelegate';
 
-const CUBISM_SCRIPT_URL = '/public/assets/cubism/core/live2dcubismcore.min.js';
+import { CUBISM_CORE_LIBRARY_URL } from '@web/config/url/index';
 
 export default {
   name: 'Cubism',
@@ -52,16 +52,14 @@ export default {
       script.onload = () => {
         this.initCubism();
       };
-      script.src = CUBISM_SCRIPT_URL;
+      script.src = CUBISM_CORE_LIBRARY_URL;
       document.body.appendChild(script);
     }
   }
 };
 </script>
 <style lang='scss' scoped>
-.c-cubism_wrapper {
-
-}
+.c-cubism_wrapper {}
 
 .js-cubism__wrapper {
   position: absolute;
