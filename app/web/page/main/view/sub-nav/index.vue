@@ -4,7 +4,8 @@
       <div class="chat-box__wrapper page__wrapper h-p-100">
         <chat-card v-for="(item, index) of dataList"
                    :key="index"
-                   :data="item" />
+                   :data="item"
+                   @click.native="handleCardClick(item)" />
       </div>
     </template>
   </column>
@@ -39,8 +40,13 @@ export default {
     getDataList() {
       this.dataList = Array(1).fill({
         name: 'cubism',
-        message: 'no-unknow.fun'
+        message: 'no-unknow.fun',
+        path: { name: 'cubism' }
       });
+    },
+
+    handleCardClick({ path }) {
+      this.$router.push(path);
     }
   }
 };

@@ -31,6 +31,7 @@ export default (app: Application) => {
 
   // add your egg config in here
   config.middleware = [
+    'authenticate',
     'gzip'
   ];
 
@@ -75,6 +76,11 @@ export default (app: Application) => {
   config.logger = {
     disableConsoleAfterReady: false,
     level: 'DEBUG'
+  };
+
+  // 鉴权中间件配置
+  config.authenticate = {
+    exclude: [ '/login' ]
   };
 
   // add your special config in here

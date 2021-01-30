@@ -21,7 +21,6 @@ const gzip: (options: EggAppConfig['gzip'], app: Application) => any = function(
     ctx.body = stream;
     ctx.set('Content-Encoding', 'gzip');
   };
-
 };
 
 export default gzip;

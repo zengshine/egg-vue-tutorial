@@ -12,7 +12,6 @@ export default (app: Application) => {
   const moduleContext = requireContext(modelDir, true, /\.ts$/);
   Object.values(moduleContext).forEach(module => {
     const register = module.default;
-    console.log('module ========>', register, module);
     register(app);
   });
 
@@ -29,6 +28,7 @@ export default (app: Application) => {
   router.get('/login', controller.login.login);
   router.get('/verify', controller.login.verify);
   router.post('/login', app.passport.authenticate('local', { successRedirect: '/verify' }));
+  router.get('/api/v1/user/logout', controller.login.logout);
 
   router.get('/', controller.main.index);
   router.get('/client', controller.main.client);

@@ -9,12 +9,18 @@
         <span class="nav-top-item__animation">{{ menu.name }}</span>
       </li>
     </ul>
-    <div class="nav-bottom" />
+    <div class="nav-bottom">
+      <div class="logout__wrapper"
+           @click="handleLogout">
+        logout
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
 import $api from '@web/page/main/service/menu';
+import $userApi from '@web/page/main/service/user';
 
 export default {
   name: 'Navigation',
@@ -33,6 +39,13 @@ export default {
     async getMenuList() {
       const res = await $api.getMenuList({});
       this.mainMenuList = res;
+    },
+
+    async handleLogout() {
+      const { code, data } = await $userApi.logout();
+      if (!code) return;
+
+      window.location.href = data.redirectUrl;
     }
   }
 };
@@ -68,5 +81,11 @@ export default {
   width: 24px;
   height: 24px;
   margin-bottom: 5px;
+}
+
+.logout__wrapper {
+  cursor: pointer;
+  line-height: 50px;
+  text-align: center;
 }
 </style>

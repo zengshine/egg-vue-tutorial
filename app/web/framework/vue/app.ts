@@ -65,11 +65,12 @@ export default class App {
 
   server() {
     return context => {
+      console.log('server render context ================>', context);
       const { Vue } = this.config;
       const vm = this.create(context.state);
       const { store, router } = vm;
 
-      // 初始化axios配置
+      // 初始化服务端axios配置
       axiosInstance.defaults.headers['x-csrf-token'] = context.state.csrf;
       axiosInstance.defaults.baseURL = 'http://localhost:7001';
 

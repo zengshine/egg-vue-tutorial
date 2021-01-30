@@ -44,7 +44,7 @@ export default class AppBootHook implements IBoot {
     // 处理用户信息
     app.passport.verify(async (ctx, user) => {
       this.app.logger.debug('verify', ctx, user);
-      console.log('verify==========================>', user);
+      console.log('app verify==========================>', user);
       // await ctx.service.user.create({ name: 'name' });
       const userInfo = await ctx.service.user.model.findOne({
         where: { name: user.username }

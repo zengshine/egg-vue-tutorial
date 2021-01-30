@@ -30,7 +30,7 @@ export default {
   data() {
     return {
       form: {
-        username: 'admin1',
+        username: 'admin',
         password: 'admin'
       }
     };
@@ -38,11 +38,9 @@ export default {
 
   methods: {
     async submit() {
-      const res = await $api.login(this.form);
-      const { data } = res.data;
-      if (data.redirectUrl) {
-        // window.location.href = data.redirectUrl;
-      }
+      const { data } = await $api.login(this.form);
+      const { redirectUrl } = data;
+      window.location.href = redirectUrl;
     }
   }
 };

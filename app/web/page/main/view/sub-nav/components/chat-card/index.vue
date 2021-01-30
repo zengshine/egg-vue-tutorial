@@ -36,6 +36,7 @@ export default {
 <style lang='scss' scoped>
 .chat-card-wrapper {
   padding: 10px;
+  cursor: pointer;
 }
 
 .logo {
