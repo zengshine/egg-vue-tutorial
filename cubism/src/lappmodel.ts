@@ -692,6 +692,7 @@ export class LAppModel extends CubismUserModel {
     }
 
     const count: number = this._modelSetting.getHitAreasCount();
+    console.log('hitTest getHitAreasCount=========================>', count)
 
     for (let i = 0; i < count; i++) {
       if (this._modelSetting.getHitAreaName(i) == hitArenaName) {
