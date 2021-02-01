@@ -10,6 +10,8 @@ export default class App {
 
   bootstrap() {
     const { Vue } = this.config;
+
+    // 注册全局组件
     Vue.use(globalComponents);
 
     if (EASY_ENV_IS_NODE) {

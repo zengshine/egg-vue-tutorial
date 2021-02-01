@@ -5,7 +5,7 @@ import { EggSequelizeOptions } from 'egg-sequelize';
 import path = require('path');
 
 import { getWebpackConfig } from '@easy-team/easywebpack-vue';
-import dbConfig from '../database/config';
+import dbConfig from '../database/config.js';
 
 export default (app: Application) => {
   const config = {} as PowerPartial<EggAppConfig>;
@@ -68,8 +68,14 @@ export default (app: Application) => {
 
   // passport-github
   config.passportGithub = {
-    key: 'd9b037cba030579cd57b', // github clientID
-    secret: 'e1393358696b6cb29d8635780cf0a2297d4b0d40' // github secret
+    key: '7ee3d0913250c42439a6', // github clientID
+    secret: '0d6a7f77572e30ed66320447accca27c6bd6d0f2' // github secret
+  };
+
+  // password-weibo
+  config.passportYuque = {
+    key: 'nnnULGMAu4zb7V6OsSBG',
+    secret: 'O52XjqP6IABjeKEzDfgIUxdT8QmpvuegMXwDuTJV'
   };
 
   // 配置日志

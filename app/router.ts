@@ -17,17 +17,21 @@ export default (app: Application) => {
 
   // 初始化passport-github
   // 挂载鉴权路由
-  app.passport.mount('github');
+  app.passport.mount('github', { successRedirect: '/main' });
 
   // 上面的 mount 是语法糖，等价于
   // const github = app.passport.authenticate('github', {});
   // router.get('/passport/github', github);
   // router.get('/passport/github/callback', github);
 
+  // 语雀
+  app.passport.mount('yuque');
+
   // 登录鉴权相关路由配置
+  router.post('/login', app.passport.authenticate('local', { successRedirect: '/verify' }));
   router.get('/login', controller.login.login);
   router.get('/verify', controller.login.verify);
-  router.post('/login', app.passport.authenticate('local', { successRedirect: '/verify' }));
+  router.get('/authSuccess', controller.login.verify);
   router.get('/api/v1/user/logout', controller.login.logout);
 
   router.get('/', controller.main.index);

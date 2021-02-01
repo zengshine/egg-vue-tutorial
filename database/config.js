@@ -5,7 +5,7 @@ const {
   DB_HOST,
   DB_PORT,
   DB_USER,
-  DB_PASSWORD,
+  DB_PASSWORD
 } = process.env;
 
 const connectConfig = {
@@ -15,10 +15,18 @@ const connectConfig = {
   host: DB_HOST,
   port: DB_PORT,
   dialect: 'mysql',
+  define: {
+    underscored: false,
+    freezeTableName: false,
+    charset: 'utf8',
+    dialectOptions: {
+      collate: 'utf8_general_ci'
+    }
+  }
 };
 
 module.exports = {
   development: connectConfig,
   test: connectConfig,
-  production: connectConfig,
+  production: connectConfig
 };

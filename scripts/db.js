@@ -37,7 +37,15 @@ const createSequelize = (dbName = '') => {
   const sequelize = new Sequelize(dbName, DB_USER, DB_PASSWORD, {
     dialect: 'mysql',
     host: DB_HOST,
-    port: DB_PORT
+    port: DB_PORT,
+    define: {
+      underscored: false,
+      freezeTableName: false,
+      charset: 'utf8',
+      dialectOptions: {
+        collate: 'utf8_general_ci'
+      }
+    }
   });
 
   return sequelize;

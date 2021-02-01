@@ -1,18 +1,35 @@
 <template>
   <Layout>
     <main class="main-wrapper h-p-100">
-      <div>
+      <header class="login-head__wrapper">
+        nounknow
+      </header>
+      <div class="login-body__wrapper">
         <div>
-          <input v-model="form.username"
-                 type="text">
+          <ul>
+            <li v-for="(authItem, index) of authMethodList"
+                :key="index"
+                @click="handleAuthenticate(authItem)">
+              <v-icon :id="authItem.icon" />
+              {{ authItem.name }}
+            </li>
+          </ul>
         </div>
-        <div>
-          <input v-model="form.password"
-                 type="text">
-        </div>
-        <button @click="submit">
-          提交
-        </button>
+        <section class="login-form__wrapper">
+          <div class="login-form-item__wrapper">
+            <input v-model="form.username"
+                   type="text">
+          </div>
+          <div class="login-form-item__wrapper">
+            <input v-model="form.password"
+                   type="password">
+          </div>
+          <div class="login-form-item__wrapper">
+            <button @click="submit">
+              提交
+            </button>
+          </div>
+        </section>
       </div>
     </main>
   </Layout>
@@ -20,6 +37,13 @@
 
 <script lang="ts">
 import $api from '@web/page/login/service/login';
+const authMethodList = [
+  { name: 'github', path: '/passport/github', icon: 'icon-weibo' },
+  { name: 'yuque', path: '/passport/yuque' },
+  { name: 'weibo', path: '/passport/weibo' },
+  { name: 'twitter', path: '/passport/twitter' }
+];
+
 export default {
   name: 'App',
 
@@ -29,6 +53,7 @@ export default {
 
   data() {
     return {
+      authMethodList,
       form: {
         username: 'admin',
         password: 'admin'
@@ -41,6 +66,11 @@ export default {
       const { data } = await $api.login(this.form);
       const { redirectUrl } = data;
       window.location.href = redirectUrl;
+    },
+
+    handleAuthenticate(authInfo) {
+      const { path } = authInfo;
+      window.location.href = path;
     }
   }
 };
@@ -48,15 +78,23 @@ export default {
 
 <style lang="scss" scoped>
 .main-wrapper {
+}
+
+.login-head__wrapper {
+  height: 55px;
+  line-height: 55px;
+}
+
+.login-body__wrapper {
   display: flex;
-  align-items: stretch;
+  justify-content: center;
 }
 
-.main-nav {
-  width: 100px;
+.login-form__wrapper {
+  padding: 0 8px;
 }
 
-.main-content {
-  width: calc( 100% - 100px );
+.login-form-item__wrapper {
+  padding: 8px 0;
 }
 </style>

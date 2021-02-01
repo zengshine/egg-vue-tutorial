@@ -1,6 +1,8 @@
 import { Application, EggAppConfig, PowerPartial } from 'egg';
+import { EggSequelizeOptions } from 'egg-sequelize';
 
 import path = require('path');
+import dbConfig from '../database/config.js';
 
 export default (app: Application) => {
   const config: PowerPartial<EggAppConfig> = {};
@@ -13,6 +15,8 @@ export default (app: Application) => {
     prefix: '/public/',
     dir: path.join(app.baseDir, 'public')
   };
+
+  config.sequelize = dbConfig.production as EggSequelizeOptions;
 
   return config;
 };

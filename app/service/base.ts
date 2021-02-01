@@ -22,6 +22,12 @@ export default class BaseService extends Service {
     return await this.model.findAll(params);
   }
 
+  async findOne(params = {}) {
+    return await this.model.findOne({
+      where: params
+    });
+  }
+
   async create(params) {
     return await this.model.create(params);
   }

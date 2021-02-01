@@ -15,7 +15,6 @@ export default class HomeController extends Controller {
   public async server() {
     const { ctx } = this;
     const { user } = ctx;
-    console.log('ctx.session=========================>', ctx.session);
     const initState = {
       user
     };

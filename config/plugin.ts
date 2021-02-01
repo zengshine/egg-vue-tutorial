@@ -34,6 +34,11 @@ const plugin: EggPlugin = {
     package: 'egg-passport-github'
   },
 
+  passportYuque: {
+    enable: true,
+    package: 'egg-passport-yuque'
+  },
+
   // vue服务端渲染插件
   vuessr: {
     enable: true,

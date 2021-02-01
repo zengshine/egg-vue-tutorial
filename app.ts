@@ -1,7 +1,4 @@
 import { Application, IBoot } from 'egg';
-
-const LocalStrategy = require('passport-local').Strategy;
-
 export default class AppBootHook implements IBoot {
   private readonly app: Application;
 
@@ -22,51 +19,11 @@ export default class AppBootHook implements IBoot {
    * 配置，插件文件已经被加载
    */
   configDidLoad() {
-    this.app.logger.debug('app.js configDidLoad');
-
     const { app } = this;
+    app.logger.debug('app.js configDidLoad');
 
-    // 挂载 strategy
-    app.passport.use(new LocalStrategy({
-      passReqToCallback: true,
-      usernameField: 'username',
-      passwordField: 'password'
-    }, (req, username, password, done) => {
-      // format user
-      const user = {
-        provider: 'local',
-        username,
-        password
-      };
-      app.passport.doVerify(req, user, done);
-    }));
-
-    // 处理用户信息
-    app.passport.verify(async (ctx, user) => {
-      this.app.logger.debug('verify', ctx, user);
-      console.log('app verify==========================>', user);
-      // await ctx.service.user.create({ name: 'name' });
-      const userInfo = await ctx.service.user.model.findOne({
-        where: { name: user.username }
-      });
-
-      // 用户不存在
-      if (!userInfo) return false;
-
-      return userInfo;
-    });
-
-    app.passport.serializeUser(async (ctx, user) => {
-      this.app.logger.debug('serializeUser', ctx, user);
-      console.log('serializeUser==========================>', user);
-      return user;
-    });
-
-    app.passport.deserializeUser(async (ctx, user) => {
-      this.app.logger.debug('deserializeUser', ctx, user);
-      console.log('deserializeUser==========================>', user);
-      return user;
-    });
+    // 初始化鉴权
+    app.initAuthorization();
   }
 
   /**
