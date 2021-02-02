@@ -14,3 +14,9 @@
 ### 自动化
 
 - 一键生成实体 model, controller, service，router 文件
+
+- 换肤
+
+- 3d 交互
+
+- gift 爬虫

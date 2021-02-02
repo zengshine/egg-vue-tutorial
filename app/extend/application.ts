@@ -27,9 +27,7 @@ export default {
       // 本地验证策略：用户密码登录
       if (provider === 'local') {
         // await ctx.service.user.create({ name: 'name' });
-        const userInfo = await ctx.service.user.model.findOne({
-          where: { name: user.username }
-        });
+        const userInfo = await ctx.service.user.findOne({ name: user.username });
 
         // 用户不存在
         if (!userInfo) return false;
@@ -48,9 +46,9 @@ export default {
         return userInfo;
       }
 
-      const userInfo = await ctx.service.user.findOne({
-        where: { id: auth.user_id }
-      });
+      const userInfo = await ctx.service.user.findOne(
+        { id: auth.user_id }
+      );
       return userInfo;
     });
 

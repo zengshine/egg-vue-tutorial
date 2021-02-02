@@ -18,14 +18,14 @@ export default class BaseService extends Service {
     this.model = app.model[name] || {};
   }
 
-  async query(params = {}) {
-    return await this.model.findAll(params);
+  async query(where = {}, options = {}) {
+    const queryOptions = Object.assign({}, options, { where });
+    return await this.model.findAll(queryOptions);
   }
 
-  async findOne(params = {}) {
-    return await this.model.findOne({
-      where: params
-    });
+  async findOne(where = {}, options = {}) {
+    const queryOptions = Object.assign({}, options, { where });
+    return await this.model.findOne(queryOptions);
   }
 
   async create(params) {

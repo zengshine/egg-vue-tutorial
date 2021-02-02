@@ -21,6 +21,8 @@ module.exports = {
     'selector-max-id': 1,
     // 允许低于1，0开始的小数单位
     'number-leading-zero': 'always',
-    'string-quotes': 'single'
+    'string-quotes': 'single',
+    // 空规则后是否跟空行
+    'rule-empty-line-before': 'always'
   }
 };

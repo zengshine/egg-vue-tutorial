@@ -20,7 +20,7 @@
         type="image/x-icon">
       <!-- iconfont link -->
       <link rel="preload"
-            href="http://at.alicdn.com/t/font_2338836_32w6wp3gw5e.js"
+            href="http://at.alicdn.com/t/font_2338836_6zdbftqphqb.js"
             as="script"
             onload="var script = document.createElement('script'); script.src = this.href; document.body.appendChild(script);">
     </head>
