@@ -5,7 +5,10 @@
 ### Common
 
 - 常量管理
+
 - 请求地址处理
+
+- 环境变量管理
 
 ### CI/CD
 
@@ -15,8 +18,22 @@
 
 - 一键生成实体 model, controller, service，router 文件
 
+### Tools
+
+- webpack5
+
+- vue3
+
+- composition api(temp)
+
+### Feature
+
 - 换肤
 
 - 3d 交互
 
 - gift 爬虫
+
+- monorepo
+
+- pwa

@@ -1,7 +1,7 @@
 <template>
   <svg class="icon"
        aria-hidden="true">
-    <use :xlink:href="'#'+ id" />
+    <use :xlink:href="'#'+ prefix + id" />
   </svg>
 </template>
 <script>
@@ -13,6 +13,11 @@ export default {
     id: {
       type: String,
       default: ''
+    },
+
+    prefix: {
+      type: String,
+      default: 'icon-'
     }
   }
 };

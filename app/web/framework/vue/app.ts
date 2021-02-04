@@ -1,5 +1,6 @@
 import globalComponents from '@web/plugins/components';
 import axiosInstance from '@web/plugins/axios';
+import VueCompositionAPI from '@vue/composition-api';
 
 export default class App {
   config: any;
@@ -13,6 +14,9 @@ export default class App {
 
     // 注册全局组件
     Vue.use(globalComponents);
+
+    // 注册composition-api
+    Vue.use(VueCompositionAPI);
 
     if (EASY_ENV_IS_NODE) {
       return this.server();

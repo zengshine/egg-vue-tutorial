@@ -3,7 +3,7 @@
     <main class="main-wrapper h-p-100">
       <header class="login-head__wrapper">
         <div class="login-header__left">
-          <v-icon id="icon-known"
+          <v-icon id="known"
                   class="header__left-icon" />
           <span class="header__left-text">NOUNKNOW</span>
         </div>
@@ -47,11 +47,11 @@
 <script lang="ts">
 import $api from '@web/page/login/service/login';
 const authMethodList = [
-  { name: 'github', path: '/passport/github', icon: 'icon-github' },
-  { name: 'github', path: '/passport/weixin', icon: 'icon-weixin' },
-  { name: 'yuque', path: '/passport/yuque', icon: 'icon-yuque' },
-  { name: 'weibo', path: '/passport/weibo', icon: 'icon-weibo' },
-  { name: 'twitter', path: '/passport/twitter', icon: 'icon-twitter' }
+  { name: 'github', path: '/passport/github', icon: 'github' },
+  { name: 'github', path: '/passport/weixin', icon: 'weixin' },
+  { name: 'yuque', path: '/passport/yuque', icon: 'yuque' },
+  { name: 'weibo', path: '/passport/weibo', icon: 'weibo' },
+  { name: 'twitter', path: '/passport/twitter', icon: 'twitter' }
 ];
 
 export default {

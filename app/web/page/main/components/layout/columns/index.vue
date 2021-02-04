@@ -5,9 +5,7 @@
       <slot name="nav" />
     </div>
     <div class="content">
-      <slot name="content">
-        <router-view />
-      </slot>
+      <slot name="content" />
     </div>
   </section>
 </template>

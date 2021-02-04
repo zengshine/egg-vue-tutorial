@@ -53,7 +53,7 @@ export default {
 <style lang='scss' scoped>
 .nav-wrapper {
   height: 100%;
-  background: #26292b;
+  background: var(--bg-color-l1);
 }
 
 .nav-top {

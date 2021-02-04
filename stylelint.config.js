@@ -23,6 +23,9 @@ module.exports = {
     'number-leading-zero': 'always',
     'string-quotes': 'single',
     // 空规则后是否跟空行
-    'rule-empty-line-before': 'always'
+    'rule-empty-line-before': [ 'always', {
+      except: [ 'first-nested' ],
+      ignore: [ 'first-nested' ]
+    }]
   }
 };

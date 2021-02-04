@@ -12,12 +12,17 @@
       ]
     },
     "web": {
-      "presets": [["env", {
-        "modules": false,
-        "targets": {
-          "browsers": ["last 2 versions", "safari >= 7"]
-        }
-      }]],
+      "presets": [
+        ["env", {
+            "modules": false,
+            "targets": {
+              "browsers": ["last 2 versions", "safari >= 7"]
+            }
+          }
+        ],
+        ["@vue/babel-preset-jsx"]
+      ],
+      
       "plugins": [
         "@babel/plugin-syntax-dynamic-import",
         "@babel/plugin-transform-object-assign",

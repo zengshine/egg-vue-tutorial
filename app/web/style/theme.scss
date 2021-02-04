@@ -1,0 +1,27 @@
+/* ----------start: dark-theme rules ----------*/
+
+body.dark-theme {
+  --bg-color-l1: #26292b;
+}
+
+/* ----------end: dark-theme rules ----------*/
+
+/* ----------start: light-theme rules ----------*/
+
+body.light-theme {
+  --bg-color-l1: gray;
+}
+
+/* ----------end: light-theme rules ----------*/
+
+@media (prefers-color-scheme: dark) {
+  // 默认是暗色主题
+
+  body {
+    --bg-color-l1: #26292b;
+  }
+
+  body.light-theme {
+    --bg-color-l1: gray;
+  }
+}

@@ -1,5 +1,6 @@
 <template>
   <column class="h-p-100">
+    <!-- 左侧导航 -->
     <template #nav>
       <div class="chat-box__wrapper page__wrapper h-p-100">
         <chat-card v-for="(item, index) of dataList"
@@ -8,12 +9,20 @@
                    @click.native="handleCardClick(item)" />
       </div>
     </template>
+
+    <!-- 二级路由容器 -->
+    <template #content>
+      <router-view />
+    </template>
   </column>
 </template>
 
 <script>
 import Column from '@web/page/main/components/layout/columns';
 import ChatCard from '@web/page/main/view/sub-nav/components/chat-card/index.vue';
+
+import { subNavList } from './const/index';
+
 export default {
   name: 'Chat',
 
@@ -38,11 +47,7 @@ export default {
     },
 
     getDataList() {
-      this.dataList = Array(1).fill({
-        name: 'cubism',
-        message: 'no-unknow.fun',
-        path: { name: 'cubism' }
-      });
+      this.dataList = subNavList;
     },
 
     handleCardClick({ path }) {
