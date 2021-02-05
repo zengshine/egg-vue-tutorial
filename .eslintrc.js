@@ -1,12 +1,22 @@
 module.exports = {
+  root: true,
+  env: {
+    node: true
+  },
   extends: [
     "eslint-config-egg/typescript",
-    "plugin:vue/recommended"
+    "plugin:vue/recommended",
   ],
 
+  // parser: "vue-eslint-parser",
   parserOptions: {
     parser: "@typescript-eslint/parser",
-    extraFileExtensions: [".vue"]
+    // project: './app/web/tsconfig.json',
+    ecmaVersion: 2020,
+    extraFileExtensions: [".vue", ".tsx"],
+    ecmaFeatures: {
+      jsx: true
+    },
   },
 
   rules: {

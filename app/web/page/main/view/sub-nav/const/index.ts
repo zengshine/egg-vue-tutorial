@@ -8,5 +8,10 @@ export const subNavList = [
     name: '3D Interactive',
     message: 'no-unknow.fun',
     path: { name: 'three.js' }
+  },
+  {
+    name: 'vue-next',
+    message: 'no-unknow.fun',
+    path: { name: 'vue-next' }
   }
 ];

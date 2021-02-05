@@ -30,8 +30,6 @@
     "bundlesize": "bundlesize"
   },
   "dependencies": {
-    "@vue/babel-helper-vue-jsx-merge-props": "^1.2.1",
-    "@vue/babel-preset-jsx": "^1.2.4",
     "@vue/composition-api": "^1.0.0-rc.1",
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
@@ -56,10 +54,15 @@
     "vant": "^2.12.2",
     "vue": "^2.6.12",
     "vue-router": "^3.4.9",
+    "vue-types": "^2.0.3",
     "vuex": "^3.6.0",
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-typescript": "^7.12.13",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@easy-team/easywebpack-cli": "^4.5.2",
@@ -70,6 +73,9 @@
     "@types/webpack-env": "^1.16.0",
     "@typescript-eslint/eslint-plugin": "^4.9.0",
     "@typescript-eslint/parser": "^4.9.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.2.1",
+    "@vue/babel-preset-jsx": "^1.2.4",
     "autod": "^3.1.1",
     "autod-egg": "^1.1.0",
     "autoprefixer": "^10.0.4",

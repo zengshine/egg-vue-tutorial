@@ -6,6 +6,7 @@
     "strict": true,
     "noImplicitAny": false,
     "jsx": "preserve",
+    "jsxFactory": "VueTsxSupport",
     "importHelpers": true,
     "moduleResolution": "node",
     "esModuleInterop": true,

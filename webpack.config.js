@@ -25,6 +25,10 @@ module.exports = {
 
   dll: [ 'vue', 'vuex', 'axios' ],
 
+  compile: {
+    thread: false
+  },
+
   performance: {
     hints: process.env.NODE_ENV === 'development' ? 'warning' : 'warning',
     maxEntrypointSize: 1024 * 178 * 3,
@@ -83,7 +87,11 @@ module.exports = {
   module: {
     rules: [
       { babel: true },
-      { ts: true },
+      { ts: {
+        options: {
+          transpileOnly: true // 默认值false，当为true时则编译器只做语言转换不做类型检查
+        }
+      } },
       {
         test: /\.scss$/,
         use: [
@@ -92,6 +100,21 @@ module.exports = {
           'sass-loader'
         ],
         include: resolve('app/web')
+      },
+      {
+        test: /\.tsx$/,
+        use: [
+          {
+            loader: 'babel-loader'
+          },
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true
+            }
+          }
+        ],
+        exclude: /node_modules/
       }
     ]
   },

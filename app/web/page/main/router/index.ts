@@ -17,6 +17,11 @@ export default {
           name: 'three.js',
           path: '/three',
           component: () => import('@web/page/main/view/three/index.vue')
+        },
+        {
+          name: 'vue-next',
+          path: '/vue-next',
+          component: () => import('@web/page/main/view/vue-next/index.vue')
         }
       ]
     }

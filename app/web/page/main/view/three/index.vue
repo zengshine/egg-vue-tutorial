@@ -42,7 +42,6 @@ export default defineComponent({
         container
       };
 
-      console.log('startUpMap=========================>', startUpMap[type]);
       const module = await startUpMap[type];
       module.startup(options);
     }

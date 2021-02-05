@@ -51,7 +51,7 @@ export default {
       document.addEventListener('keydown', this.handleKeyDown);
     },
 
-    removeDomListener() {
+    removeDomListener(): void {
       document.removeEventListener('keydown', this.handleKeyDown);
     },
 

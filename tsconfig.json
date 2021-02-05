@@ -13,6 +13,8 @@
     "emitDecoratorMetadata": true,
     "charset": "utf8",
     "allowJs": false,
+    "jsx": "preserve",
+    "jsxFactory": "VueTsxSupport",
     "pretty": true,
     "noEmitOnError": false,
     "noUnusedLocals": true,

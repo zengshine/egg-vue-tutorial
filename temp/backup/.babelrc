@@ -6,7 +6,9 @@
         "targets": {
           "node": "current" 
         }
-      }]],
+      }], 
+      ["@vue/babel-preset-jsx"]
+    ],
       "plugins": [
         "@babel/plugin-syntax-dynamic-import"
       ]
@@ -20,9 +22,9 @@
             }
           }
         ],
-        ["@vue/babel-preset-jsx"]
+        ["@vue/babel-preset-jsx", { "compositionAPI": true }]
       ],
-      
+
       "plugins": [
         "@babel/plugin-syntax-dynamic-import",
         "@babel/plugin-transform-object-assign",

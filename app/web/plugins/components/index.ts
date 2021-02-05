@@ -1,4 +1,4 @@
-const moduleContext = require.context('@web/components', true, /\.vue$/);
+const moduleContext = require.context('@web/components', true, /\.(vue|tsx)$/);
 
 export default Vue => {
   moduleContext.keys().forEach(key => {
