@@ -1,4 +1,4 @@
-interface mainState {
+interface MainState {
   isNavVisible: boolean,
   csrfToken: string
 }

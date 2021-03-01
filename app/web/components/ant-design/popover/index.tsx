@@ -1,6 +1,7 @@
-import { defineComponent } from '@vue/composition-api';
-
+import { defineComponent, inject } from '@vue/composition-api';
 import PropTypes from '@web/utils/vue-types';
+
+import Tooltip from '../tooltip/Tooltip';
 
 export default defineComponent({
   name: 'Popover',
@@ -8,12 +9,30 @@ export default defineComponent({
     title: PropTypes.string
   } as any,
 
+  setup() {
+    return {
+      configProvider: inject('configProvider') as any
+    };
+  },
+
   render() {
-    const { $slots } = this;
-    console.log('$slots=========================>', $slots?.default);
+    const { $slots, configProvider } = this;
+    const { theme } = configProvider;
+    console.log('configProvider=========================>', theme);
+
+    const title = (
+      <div>
+        <div>{ $slots.title }</div>
+        <div>{ $slots.content }</div>
+      </div>
+    );
+
+    const tooltipProps = {
+      title
+    };
 
     return (
-      <div>test</div>
+      <Tooltip props={tooltipProps}>{ $slots.default }</Tooltip>
     );
   }
 });

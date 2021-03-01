@@ -7,6 +7,7 @@
       <template #content>
         <div>content</div>
       </template>
+      <div>default slot</div>
     </popover>
   </div>
 </template>

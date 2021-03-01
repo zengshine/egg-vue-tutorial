@@ -75,7 +75,7 @@ module.exports = {
   resolve: {
     modules: [ resolve('node_modules') ],
     mainFields: [ 'browser', 'module', 'main' ],
-    extensions: [ '.ts', '.js', '.vue' ],
+    extensions: [ '.ts', '.js', '.vue', '.tsx' ],
     alias: {
       '@': resolve('.'),
       '@app': resolve('app'),

@@ -25,7 +25,7 @@ export default (app: Application) => {
   // router.get('/passport/github/callback', github);
 
   // 语雀
-  app.passport.mount('yuque');
+  app.passport.mount('yuque', { successRedirect: '/main' });
 
   // 登录鉴权相关路由配置
   router.post('/login', app.passport.authenticate('local', { successRedirect: '/verify' }));

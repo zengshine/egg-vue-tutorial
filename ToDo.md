@@ -18,6 +18,8 @@
 
 - 一键生成实体 model, controller, service，router 文件
 
+- tsx lint
+
 ### Tools
 
 - webpack5

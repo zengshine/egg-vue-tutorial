@@ -13,14 +13,23 @@
 </template>
 
 <script lang="ts">
+import { defineComponent, reactive, provide } from '@vue/composition-api';
+
 import Navigation from '@web/page/main/view/navigation/index.vue';
 
 import { mapState } from 'vuex';
-export default {
+export default defineComponent({
   name: 'App',
 
   components: {
     Navigation
+  },
+
+  setup() {
+    const globalConfig = reactive({
+      theme: 'themeConifg'
+    });
+    provide('configProvider', globalConfig);
   },
 
   data() {
@@ -68,7 +77,7 @@ export default {
       this.$store.commit('SET_NAV_VISIBILITY', !isNavVisible);
     }
   }
-};
+});
 </script>
 
 <style lang="scss" scoped>

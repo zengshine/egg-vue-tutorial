@@ -31,4 +31,5 @@ PropTypes.extend([
 
 export default PropTypes as VueTypesInterface & {
   readonly looseBool: VueTypeValidableDef<boolean>;
+  readonly VNodeChild: VueTypeValidableDef<JSX.Element>
 };

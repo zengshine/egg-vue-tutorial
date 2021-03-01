@@ -1,8 +1,8 @@
 /**
  * @file 状态管理
  */
-const state: mainState = {
-  isNavVisible: true,
+const state: MainState = {
+  isNavVisible: false,
   csrfToken: ''
 };
 
