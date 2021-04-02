@@ -22,6 +22,11 @@ export default {
           name: 'vue-next',
           path: '/vue-next',
           component: () => import('@web/page/main/view/vue-next/index.vue')
+        },
+        {
+          name: 'wys-is-wyg',
+          path: '/wys-is-wyg',
+          component: () => import('@web/page/main/view/wys-is-wyg/index.vue')
         }
       ]
     }
